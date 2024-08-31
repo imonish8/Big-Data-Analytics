@@ -6,4 +6,4 @@ def diagonal_sum(matrix):
     return sumD
 
 # time : O(N)
-# space : O(1)
+# space : O(1) O(1), as the function only uses a single variable to store the sum 
