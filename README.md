@@ -14,7 +14,19 @@ Going to Event on 24 Oct here :
 <a href="" target="_blank"><img src="https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white"/></a>
 
 
+## Technology in Mastery
 
+<div classname="flex flex-row">
+<img src="https://img.shields.io/badge/Ubuntu-E95420.svg?style=for-the-badge&logo=Ubuntu&logoColor=white"/>
+<img src="https://img.shields.io/badge/macOS-000000.svg?style=for-the-badge&logo=macOS&logoColor=white"/>
+</div>
 
+<div classname="flex flex-row">
+<img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"/>
+<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+<img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/Apple-MacBook_Pro_2024-999999?style=for-the-badge&logo=apple&logoColor=white"/>
+  
+</div>
 <a href="" target="_blank"><img src=""/></a>
 
