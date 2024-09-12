@@ -1,0 +1,7 @@
+public D5_1{
+		static int findIndex(int arr[], int target){
+			
+		}
+		public static void main(String[] args){
+			int arr [] = {21,34,23,67,58,30);
+			

@@ -1,0 +1,25 @@
+public class interest{
+		public static void main(String[] args){
+	
+		double principle,rate;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the Rate of interest");
+		principle = sc.nextDouble();
+		
+		System.out.println("Enter the rate of interest");
+		rate = sc.nextDouble();
+
+		System.out.println("Enter the number times interest in compounded");
+		int n = sc.nextInt();
+	
+		System.out.println("Enter the number of time periods");
+		int t = sc.nextInt();
+
+		double C1 = principal*Math.pow((1.0+(rate/n),(n*t));
+		System.out.println("Compound interest Calculated"+C1);
+		
+	 
+
+	}
+}
