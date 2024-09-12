@@ -1,0 +1,266 @@
+Last login: Sun Sep  8 07:02:54 on ttys001
+imonish8@Monishsacintosh ~ % brew help
+Example usage:
+  brew search TEXT|/REGEX/
+  brew info [FORMULA|CASK...]
+  brew install FORMULA|CASK...
+  brew update
+  brew upgrade [FORMULA|CASK...]
+  brew uninstall FORMULA|CASK...
+  brew list [FORMULA|CASK...]
+
+Troubleshooting:
+  brew config
+  brew doctor
+  brew install --verbose --debug FORMULA|CASK
+
+Contributing:
+  brew create URL [--no-fetch]
+  brew edit [FORMULA|CASK...]
+
+Further help:
+  brew commands
+  brew help [COMMAND]
+  man brew
+  https://docs.brew.sh
+imonish8@Monishsacintosh ~ % brew help commands
+Usage: brew commands [--quiet] [--include-aliases]
+
+Show lists of built-in and external commands.
+
+  -q, --quiet                      List only the names of commands without
+                                   category headers.
+      --include-aliases            Include aliases of internal commands.
+  -d, --debug                      Display any debugging information.
+  -v, --verbose                    Make some output more verbose.
+  -h, --help                       Show this message.
+imonish8@Monishsacintosh ~ % brew list
+==> Formulae
+abseil
+ca-certificates
+gettext
+git
+icu4c
+lz4
+mpdecimal
+mysql
+openssl@3
+pcre2
+protobuf
+python@3.12
+readline
+sqlite
+xz
+zlib
+zstd
+
+==> Casks
+imonish8@Monishsacintosh ~ % brew install mysql
+==> Auto-updating Homebrew...
+Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with
+HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Auto-updated Homebrew!
+Updated 2 taps (homebrew/core and homebrew/cask).
+==> New Formulae
+bed                        immich-cli                 oasdiff
+==> New Casks
+dfcf                       gitlight                   wealthfolio
+
+You have 2 outdated formulae installed.
+
+Warning: mysql 9.0.1_1 is already installed and up-to-date.
+To reinstall 9.0.1_1, run:
+  brew reinstall mysql
+imonish8@Monishsacintosh ~ % mysql --version   
+mysql  Ver 9.0.1 for macos14.4 on arm64 (Homebrew)
+imonish8@Monishsacintosh ~ % brew --version
+Homebrew 4.3.19
+imonish8@Monishsacintosh ~ % mysql -u root -p    
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.39 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE school_DB;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use my_first_db;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SELECT * FROM Employee;
++--------+--------------+---------+--------+------+
+| Emp_no | Emp_name     | Dept_id | Salary | Age  |
++--------+--------------+---------+--------+------+
+|      1 | Neil Patel   | N01     |  46000 |   24 |
+|      2 | Dvij Bhutada | D02     |  45222 |   22 |
++--------+--------------+---------+--------+------+
+2 rows in set (0.01 sec)
+
+mysql> INSERT INTO Employee (Emp_no, Emp_name, Dept_id, Salary, Age)
+    -> VALUES
+    -> (3, 'Preet Singh', 'N01', 1500000, 21),
+    -> (4, 'Salman Khan', 'E01', 10000, 98),
+    -> (5, 'SRK', 'S10', '9',52);
+Query OK, 3 rows affected (0.04 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Employee;
++--------+--------------+---------+---------+------+
+| Emp_no | Emp_name     | Dept_id | Salary  | Age  |
++--------+--------------+---------+---------+------+
+|      1 | Neil Patel   | N01     |   46000 |   24 |
+|      2 | Dvij Bhutada | D02     |   45222 |   22 |
+|      3 | Preet Singh  | N01     | 1500000 |   21 |
+|      4 | Salman Khan  | E01     |   10000 |   98 |
+|      5 | SRK          | S10     |       9 |   52 |
++--------+--------------+---------+---------+------+
+5 rows in set (0.01 sec)
+
+mysql> mysql> DELE Employee
+    -> WHERE Name = 'Salman Khan';
+ERROR 1054 (42S22): Unknown column 'Name' in 'where clause'
+mysql> DELETE FROM Employee WHERE Emp_no = 4;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> SELECT * FROM Employee;                                   +--------+--------------+---------+---------+------+
+| Emp_no | Emp_name     | Dept_id | Salary  | Age  |
++--------+--------------+---------+---------+------+
+|      1 | Neil Patel   | N01     |   46000 |   24 |
+|      2 | Dvij Bhutada | D02     |   45222 |   22 |
+|      3 | Preet Singh  | N01     | 1500000 |   21 |
+|      5 | SRK          | S10     |       9 |   52 |
++--------+--------------+---------+---------+------+
+4 rows in set (0.01 sec)
+
+mysql> ---+--------------+---------+---------+------+
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '---+--------------+---------+---------+------+' at line 1
+mysql> TRUNCATE TABLE Employee
+    -> ;
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> SELECT * FROM Employee;
+Empty set (0.01 sec)
+
+mysql> DROP TABLE Employee;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> CREATE TABLE Employee ( Emp_no INT PRIMARY KEY, Emp_name VARCHAR(20) NOT NULL, Dept_id VARCHAR(20) NOT NULL, Salary FLOAT (6.2) DEFAULT 40000.00, Age INT CHECK (Age > 20) );
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> CREATE TABLE Department (ID INT AUTO_INCREMENT PRIMARY KEY,Dept_id INT NOT NULL,Dept_name VARCHAR(20) NOT NULL,Location VARCHAR (15) DEFAULT 'CDAC_CHENNAI') AUTO_INCREMENT = 100;
+ERROR 1050 (42S01): Table 'department' already exists
+mysql> CREATE TABLE Departments (ID INT AUTO_INCREMENT PRIMARY KEY,Dept_id INT NOT NULL,Dept_name VARCHAR(20) NOT NULL,Location VARCHAR (15) DEFAULT 'CDAC_CHENNAI') AUTO_INCREMENT = 100;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> DESCRIBE Employee;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| Emp_no   | int         | NO   | PRI | NULL    |       |
+| Emp_name | varchar(20) | NO   |     | NULL    |       |
+| Dept_id  | varchar(20) | NO   |     | NULL    |       |
+| Salary   | float       | YES  |     | 40000   |       |
+| Age      | int         | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+5 rows in set (0.03 sec)
+
+mysql> mysql> DESCRIBE Departments;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESCRIBEESCRIBE Departments' at line 1
+mysql> DESCRIBE Departments;
++-----------+-------------+------+-----+--------------+----------------+
+| Field     | Type        | Null | Key | Default      | Extra          |
++-----------+-------------+------+-----+--------------+----------------+
+| ID        | int         | NO   | PRI | NULL         | auto_increment |
+| Dept_id   | int         | NO   |     | NULL         |                |
+| Dept_name | varchar(20) | NO   |     | NULL         |                |
+| Location  | varchar(15) | YES  |     | CDAC_CHENNAI |                |
++-----------+-------------+------+-----+--------------+----------------+
+4 rows in set (0.01 sec)
+
+mysql> INSERT INTO Employee (Emp_no, Emp_name, Dept_id, Salary, Age)
+    -> VALUES(1, 'Tim Cook', 'D01', '528.63' 63),
+    -> VALUES(1, 'Steve Jobs', 'D02', '558.63', 45),
+    -> VALUES(1, 'Satya Nadella', 'D03', '989.63', 56),
+    -> VALUES(1, 'Rauch Guillerimo', 'D03', '98.63', 34);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '63),
+VALUES(1, 'Steve Jobs', 'D02', '558.63', 45),
+VALUES(1, 'Satya Nadella', 'D' at line 2
+mysql> INSERT INTO Employee (Emp_no, Emp_name, Dept_id, Salary, Age) VALUES(1, 'Tim Cook', 'D01', '528.63' ,63), VALUES(1, 'Steve Jobs', 'D02', '558.63', 45), VALUES(1, 'Satya Nadella', 'D03', '989.63', 56), VALUES(1, 'Rauch Guillerimo', 'D03', '98.63', 34);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES(1, 'Steve Jobs', 'D02', '558.63', 45), VALUES(1, 'Satya Nadella', 'D03', ' at line 1
+mysql> INSERT INTO Employee (Emp_no, Emp_name, Dept_id, Salary, Age) VALUES(1, 'Tim Cook', 'D01', '528.63' ,63), VALUES(1, 'Steve Jobs', 'D02', '558.63', 45), VALUES(1, 'Satya Nadella', 'D03', '989.63', 56), VALUES(1, 'Rauch Guillerimo', 'D03', '98.63', 3ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES(1, 'Steve Jobs', 'D02', '558.63', 45), VALUES(1, 'Satya Nadella', 'D03', ' at line 1
+mysql> INSERT INTO Employee (Emp_no, Emp_name, Dept_id, Salary, Age) VALUES(1, 'Tim Cook', 'D01', '528.63' ,63), (1, 'Steve Jobs', 'D02', '558.63', 45), (1, 'Satya Nadella', 'D03', '989.63', 56),(1, 'Rauch Guillerimo', 'D03', '98.63', 34); 
+ERROR 1062 (23000): Duplicate entry '1' for key 'employee.PRIMARY'
+mysql> INSERT INTO Employee (Emp_no, Emp_name, Dept_id, Salary, Age) VALUES(1, 'Tim Cook', 'D01', '528.63' ,63), (1, 'Steve Jobs', 'D02', '558.63', 45), (1, 'Satya Nadella', 'D03', '989.63', 56),(1, 'Rauch Guillerimo', 'D04', '98.63', 34);
+ERROR 1062 (23000): Duplicate entry '1' for key 'employee.PRIMARY'
+mysql> INSERT INTO Employee (Emp_no, Emp_name, Dept_id, Salary, Age) VALUES( 'Tim Cook', 'D01', '528.63' ,63), ( 'Steve Jobs', 'D02', '558.63', 45), ( 'Satya Nadella', 'D03', '989.63', 56),( 'Rauch Guillerimo', 'D04', '98.63', 34);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO Employee (Emp_no, Emp_name, Dept_id, Salary, Age) VALUES(1, 'Tim Cook                                                                                 la', 'D03', '989.63', 56),( 4,'Rauch Guillerimo', 'D04', '98.63', 34);
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Employee;
++--------+------------------+---------+--------+------+
+| Emp_no | Emp_name         | Dept_id | Salary | Age  |
++--------+------------------+---------+--------+------+
+|      1 | Tim Cook         | D01     | 528.63 |   63 |
+|      2 | Steve Jobs       | D02     | 558.63 |   45 |
+|      3 | Satya Nadella    | D03     | 989.63 |   56 |
+|      4 | Rauch Guillerimo | D04     |  98.63 |   34 |
++--------+------------------+---------+--------+------+
+4 rows in set (0.00 sec)
+
+mysql> INSERT INTO Departments (ID, Dept_id, Dept_name, Location) VALUES
+    -> (1,001, 'FINANCE');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> (1,001, 'FINANCE', 'CDAC_CHENNAI');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,001, 'FINANCE', 'CDAC_CHENNAI')' at line 1
+mysql> (1, 'FINANCE');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1, 'FINANCE')' at line 1
+mysql> INSERT INTO Departments (ID, Dept_id, Dept_name, Location) VALUES (1,'HR');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> SELECT * FROM Departments;
+Empty set (0.01 sec)
+
+mysql> DESCRIBE Departments;
++-----------+-------------+------+-----+--------------+----------------+
+| Field     | Type        | Null | Key | Default      | Extra          |
++-----------+-------------+------+-----+--------------+----------------+
+| ID        | int         | NO   | PRI | NULL         | auto_increment |
+| Dept_id   | int         | NO   |     | NULL         |                |
+| Dept_name | varchar(20) | NO   |     | NULL         |                |
+| Location  | varchar(15) | YES  |     | CDAC_CHENNAI |                |
++-----------+-------------+------+-----+--------------+----------------+
+4 rows in set (0.02 sec)
+
+mysql> INSERT INTO Departments VALUES
+    -> (1,'HR');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO Departments VALUES (1,'HR'), (2,'DEVELOPER'),(3,'TESTER'),(4, 'BOARD');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO Departments VALUES (1,24,'HR', 'Chennai'), (2,25,'DEVELOPER','CHENNAI'),(3,34,'TESTER','CHENNAI'),(4,45, 'BOARD','CHENNAI');
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Departments;
++----+---------+-----------+----------+
+| ID | Dept_id | Dept_name | Location |
++----+---------+-----------+----------+
+|  1 |      24 | HR        | Chennai  |
+|  2 |      25 | DEVELOPER | CHENNAI  |
+|  3 |      34 | TESTER    | CHENNAI  |
+|  4 |      45 | BOARD     | CHENNAI  |
++----+---------+-----------+----------+
+4 rows in set (0.00 sec)
+
+mysql> 

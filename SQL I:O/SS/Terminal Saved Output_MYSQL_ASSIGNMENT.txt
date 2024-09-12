@@ -1,0 +1,207 @@
+Last login: Sat Sep  7 18:56:40 on ttys002
+imonish8@Monishsacintosh ~ % cd desktop/SQL_FILES
+imonish8@Monishsacintosh SQL_FILES % mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.39 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE TABLE Students
+    -> (Student_id NUMBER not null,
+    -> Student_name varchar(30),
+    -> marks NUMBER check(marks > 35));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NUMBER not null,
+Student_name varchar(30),
+marks NUMBER check(marks > 35))' at line 2
+
+
+
+mysql> CREATE TABLE Students (Student_id NUMBER not null, Student_name varchar(30), marks NUMBER check(marks > 35))
+    -> exit;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NUMBER not null, Student_name varchar(30), marks NUMBER check(marks > 35))
+exit' at line 1
+mysql> exit;
+Bye
+imonish8@Monishsacintosh SQL_FILES % mysql -u root -p    
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.39 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+
+
+mysql> CREATE TABLE Employee (
+    -> Emp_no INT,
+    -> Emp_name VARCHAR(20)
+    -> );
+ERROR 1046 (3D000): No database selected
+mysql> use my_first_db;
+✅Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> CREATE TABLE Employee ( Emp_no INT, Emp_name VARCHAR(20) );
+✅Query OK, 0 rows affected (0.02 sec)
+
+mysql> ALTER TABLE Employee
+    -> ADD Dept VARCHAR(20);
+✅Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE Employee
+✅    -> ADD Salary FLOAT(4,2),
+    -> ADD Age VARCHAR(5);
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+mysql> ALTER TABLE Employee
+    -> MODIFY Age INT;
+✅Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE Employee
+    -> RENAME COLUMN Dept TO Dept_id;
+✅Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Employee ( Emp_no, Emp_name, Dept_id, Salary, Age)
+    -> VALUES (1, 'Naveen Dongre', 'D01', 45000,25), 
+    ->        (2, 'Shanya Kapoor', 'D02', 90000,30), 
+    -> 
+✅Display all 777 possibilities? (y or n) 
+    -> VALUES (1, 'Naveen Dongre', 'D01', 45000,25), 
+    -> 
+    ->        (2, 'Shanya Kapoor', 'D02', 90000,30), 
+    ->        (3, 'Albus Dumbldore', 'HeadMaster', 99999, 75),
+    ->        (4, 'Prof. Snape', 'Dark Arts', 777777, 40);
+✅ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES (1, 'Naveen Dongre', 'D01', 45000,25),
+
+       (2, 'Shanya Kapoor', 'D02'' at line 4
+mysql> INSERT INTO Employee ( Emp_no, Emp_name, Dept_id, Salary, Age) VALUES (1, 'Naveen Dongre',mysql> DELETE FROM Employee
+✅    -> WHERE Emp_no = 3;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> TRUNCATE TABLE Employee;
+✅Query OK, 0 rows affected (0.02 sec)
+
+mysql> DROP TABLE Employee;
+✅Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE Employee (
+    -> Emp_no INT PRIMARY KEY,
+    -> Emp_name VARCHAR(20) NOT NULL,
+    -> Dept_id VARCHAR(20) NOT NULL,
+    -> Salary FLOAT(6,2) DEFAULT 40000,
+    -> Age INT CHECK (Age > 20) );
+✅ERROR 1067 (42000): Invalid default value for 'Salary'
+mysql> CREATE TABLE Employee ( Emp_no INT PRIMARY KEY, Emp_name VARCHAR(20) NOT NULL, Dept_id VARCHAR(20) NOT NULL, Salary FLOAT(6,2) DEFAULT 40000.00, Age INT CHECK (Age > 20) );
+ERROR 1067 (42000): Invalid default value for 'Salary'
+mysql> CREATE TABLE Employee ( Emp_no INT PRIMARY KEY, Emp_name VARCHAR(20) NOT NULL, Dept_id VARCHAR(20) NOT NULL, Salary FLOAT(6.2) DEFAULT 40000.00, Age INT CHECK (Age > 20) );
+✅Query OK, 0 rows affected (0.02 sec)
+
+mysql> CREATE TABLE Department (
+    -> ID INT AUTO_INCREMENT PRIMARY KEY,
+    -> Dept_id INT NOT NULL,
+    -> Dept_name VARCHAR(20) NOT NULL,
+    -> Location VARCHAR(15) DEFAULT 'CDAC_CHENNAI'
+    -> ) AUTO_INCREMENT = 100;
+✅Query OK, 0 rows affected (0.01 sec)
+
+mysql> DESCRIBE EMPLOYEE;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| Emp_no   | int         | NO   | PRI | NULL    |       |
+| Emp_name | varchar(20) | NO   |     | NULL    |       |
+| Dept_id  | varchar(20) | NO   |     | NULL    |       |
+| Salary   | float       | YES  |     | 40000   |       |
+| Age      | int         | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+✅5 rows in set (0.00 sec)
+
+mysql> DESCRIBE Department;
++-----------+-------------+------+-----+--------------+----------------+
+| Field     | Type        | Null | Key | Default      | Extra          |
++-----------+-------------+------+-----+--------------+----------------+
+| ID        | int         | NO   | PRI | NULL         | auto_increment |
+| Dept_id   | int         | NO   |     | NULL         |                |
+| Dept_name | varchar(20) | NO   |     | NULL         |                |
+| Location  | varchar(15) | YES  |     | CDAC_CHENNAI |                |
++-----------+-------------+------+-----+--------------+----------------+
+✅4 rows in set (0.00 sec)
+
+mysql> INSERT INTO Employee (Emp_no, Emp_name, Dept_id, Salary,Age)
+    -> VALUES(1, 'Neil Patel', 'N01', 45000,24),
+    -> (2, 'Dvij Bhutada', 'D02',45222,22);
+✅Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Department(Dept_id, Dept_name)
+    -> VALUES(1, 'HR'),
+    -> (2, 'FINANCE'),
+    -> (3, 'IT');
+✅Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Employee;
++--------+--------------+---------+--------+------+
+| Emp_no | Emp_name     | Dept_id | Salary | Age  |
++--------+--------------+---------+--------+------+
+|      1 | Neil Patel   | N01     |  45000 |   24 |
+|      2 | Dvij Bhutada | D02     |  45222 |   22 |
++--------+--------------+---------+--------+------+
+✅2 rows in set (0.01 sec)
+
+mysql> SELECT * FROM Department;
++-----+---------+-----------+--------------+
+| ID  | Dept_id | Dept_name | Location     |
++-----+---------+-----------+--------------+
+| 100 |       1 | HR        | CDAC_CHENNAI |
+| 101 |       2 | FINANCE   | CDAC_CHENNAI |
+| 102 |       3 | IT        | CDAC_CHENNAI |
++-----+---------+-----------+--------------+
+✅3 rows in set (0.00 sec)
+
+mysql> SELECT Emp_no, Emp_name,Salary FROM Employee
+    -> ;
++--------+--------------+--------+
+| Emp_no | Emp_name     | Salary |
++--------+--------------+--------+
+|      1 | Neil Patel   |  45000 |
+|      2 | Dvij Bhutada |  45222 |
++--------+--------------+--------+
+✅2 rows in set (0.00 sec)
+
+mysql> UPDATE Employee
+    -> SET Salary = Salary + 1000
+    -> WHERE Salary < 45222;
+Query OK, 1 row affected (0.01 sec)
+✅Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT Emp_no, Emp_name,Salary FROM Employee
+    -> ;
++--------+--------------+--------+
+| Emp_no | Emp_name     | Salary |
++--------+--------------+--------+
+|      1 | Neil Patel   |  46000 |
+|      2 | Dvij Bhutada |  45222 |
++--------+--------------+--------+
+✅2 rows in set (0.00 sec)
+
+mysql> 
