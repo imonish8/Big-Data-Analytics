@@ -37,7 +37,15 @@ import java.util.*;
 		
 }
 
-
+	class PGStudents extends student_data {
+		PGStudents(){
+			super();
+			
+		}
+		void Display(){
+			super.Display();	
+		}
+	}
 	public class student {
 
 		public static void main(String[] args){
