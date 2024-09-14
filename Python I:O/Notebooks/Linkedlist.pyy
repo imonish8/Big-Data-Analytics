@@ -1,0 +1,32 @@
+class Node:
+	def __init__(self, value):
+		self.value = value
+		self.next = None
+
+# Linkedlist with Length ONE.
+class Linkedlist:
+	def __init__(self, value):
+		new_node = Node(value) # O(1)
+		self.head = new_node # O(1)
+		self.tail = new_node #O(1)
+		# we are putting assiging head and tail new_node becasue this single element linkedlist.
+		self.length = 1
+		
+
+new_Linkedlist = Linkedlist(20)
+print(new_Linkedlist)
+print(new_Linkedlist.head)
+print(new_Linkedlist.tail)
+print(new_Linkedlist.head.value)
+print(new_Linkedlist.length)
+		
+
+
+"""
+# empty linkedlist here woth length ZERO.
+class LinkedList:
+	def__init(self):
+		self.head = None
+		self.tail = None
+		self.length = 0
+"""
