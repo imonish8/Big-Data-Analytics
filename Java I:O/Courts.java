@@ -1,8 +1,8 @@
-// Under Consistitution we have 5 courts and 2 Subordinate Courts
+
 
 class Supreme{
 	private String Suo_Motu;
-	private String Constitutional_review;
+	private String Constit_review;
 
 	String hearing_case;
 	String Granting_bail;
@@ -10,18 +10,25 @@ class Supreme{
 	private String Level;
 
 	Supreme(){
-		Suo_Motu = "The Supreme Court can take up matters on its own (suo motu) without anyone formally filing a case";
-		Constitutional_review = "The Supreme Court only has power to Reject / Accept Laws Passed in parliment";
-		hearing_case = "All Courts court can hear cases";
+		Suo_Motu = "Power Remains to Supreme court only, This should not be printed on anyther child objects";
+		Constit_review = "Power Remains to Supreme Court only, Not accessible to child objects.";
+		hearing_case = "All Courts  can hear cases";
 		Granting_bail = "All Courts have power to grant Bail";
 		Level = "Top Most Court";
 		}
 	void Display(){
-		System.out.println("Private to/ Power remains to Supreme Court Only, that is "+Suo_Motu);
-		System.out.println("Private to/ Power remains to Supreme Court only, That is "+Constitutional_review);
+
+// why printing when declared private ?
+//any solution ? protected ????
+
+		System.out.println("Power remains to Supreme Court Only, that is "+Suo_Motu);
+		System.out.println("Power remains to Supreme Court only, That is "+Constit_review);
+		System.out.println("Unique to this court, that is :"+Level);
+		
+// ok
 		System.out.println("Common to all Courts, That is :"+hearing_case);
 		System.out.println("Common to all Courts, that is :"+Granting_bail);
-		System.out.println("Unique to each court, that is :"+Level);
+		
 		
 		}
 	 
@@ -37,6 +44,7 @@ class High extends Supreme{
 		}
 	void Display(){
 		super.Display();
+		System.out.println("High Court Power");
 		System.out.println("Unique to High Court, that is, "+Level);
 		
 		}
@@ -51,7 +59,8 @@ class District extends Supreme {
 		}
 		void Display(){
 			super.Display();
-			System.out.println("District Courts hold a Title which is Unique, That is,"+Level);
+			System.out.println("District Power");
+			System.out.println("Unique Level of this court, That is,"+Level);
 		}
 	}
 
@@ -64,6 +73,7 @@ class Subordinate  extends Supreme{
 		}	
 		void Display(){
 			super.Display();
+			System.out.println("Subordinate Powers");
 			System.out.println("Subordinate hold a unique Title, that is "+Level);
 		}	
 	}
@@ -79,6 +89,7 @@ class SpecializedTribunal extends Supreme{
 		
 		void Display(){
 			super.Display();
+			System.out.println("Specialized And tribunal Powers");
 			System.out.println("Specialized Tribunal Court Hold such a Power "+Level);
 		}
 	}
@@ -101,12 +112,12 @@ public class Courts {
 	//	Supreme obj1 = new Supreme();
 	//	obj1.Display();
 	
-		High obj2 = new High();
-		obj2.Display();
-	/*	
+	//	High obj2 = new High();
+	//	obj2.Display();
+	
 		Subordinate obj3 = new Subordinate();
 		obj3.Display();
-	
+	/*
 		District obj4 - new District();
 		obj4.Display();
 
