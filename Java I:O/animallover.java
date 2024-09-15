@@ -44,6 +44,18 @@ class dogLover extends animal{
 		}
 			
 	}
+class puppy extends dogLover{
+		String puppy_food;
+		
+		puppy(){
+			super();
+			puppy_food = "Mild Chicken";
+		}
+		void Display(){
+			super.Display();
+			System.out.println("Puppy eats :"+puppy_food);
+		}
+	}
 class catLover extends animal{
 		int num_vac;
 		String cat_food;
@@ -70,6 +82,18 @@ class catLover extends animal{
 
 			
 	}
+class kitten extends catLover{
+		String kitten_food;
+
+		kitten(){
+			super();
+			kitten_food = "Tuna Fish";
+		}
+		void Display(){
+			super.Display();
+			System.out.println("Kitten Loves : "+kitten_food);
+		}
+	}
 
 class horseLover extends animal{
 		
@@ -85,7 +109,7 @@ class horseLover extends animal{
 				
 		}
 		void Display(){
-			System.out.println();
+			
 			super.Display();
 			System.out.println("Number of Vaccinations Done are "+num_vac+" / 13");
 			System.out.println("Your Horse/ Foal Favourite Food is "+horse_food);
@@ -97,22 +121,27 @@ class horseLover extends animal{
 public class animallover{
 		public static void main(String[] args){
 		
-		char Likes;
+	//	String str;
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Please enter Animal of your choice: (eg., Dog = D, Cat = C,Horse = 'H' etc.");
+	//	Scanner sc = new Scanner(System.in);
+	//	System.out.println("Please enter Animal of your choice: (eg.,Dog, Cat ,Horse, Kitten, Puppy. etc.");
 		
-		Likes = sc.next().charAt(0);
-		
-		if( Likes == 'D'){
+	
 			dogLover obj1 = new dogLover();
 			obj1.Display();
-		}else if(Likes == 'C'){
+		
 		        catLover obj2 = new catLover();
 			obj2.Display();
-		}else if(Likes == 'H'){
+	
 			horseLover obj3 = new horseLover();
 			obj3.Display();	
-		}
+		
+			puppy obj4 = new puppy();
+			obj4.Display();
+		
+			kitten obj5 = new kitten();
+			obj5.Display();
+	
+		
 	}
 }
