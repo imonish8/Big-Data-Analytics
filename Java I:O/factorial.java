@@ -1,17 +1,21 @@
 public class factorial {
 		int n;
+		int res;
 		factorial(int n){
 			if(n == 1){
 			 return 1;
 			}
 			else{
-				return(n*factorial(n-1));
+				 res = (n*factorial(n-1));
 			}
 		}
+	
 		void Display(){
-		int result = n*factorial(n-1);
-		System.out.println("Factorial is"+result);
+			System.out.println("Factorial is"+res);
 		}
+	
+
+
 		public static void main(String[] args){
 
 			factorial fact = new factorial(7);

@@ -1,7 +1,7 @@
 import java.util.*;
 class animal{
 	int age;
-	int gender;
+	char gender;
 	animal(){
 		System.out.println("Enter the age of the Pet in Months");
 		Scanner sc = new Scanner(System.in);
@@ -126,19 +126,23 @@ public class animallover{
 	//	Scanner sc = new Scanner(System.in);
 	//	System.out.println("Please enter Animal of your choice: (eg.,Dog, Cat ,Horse, Kitten, Puppy. etc.");
 		
-	
+			System.out.println("Dog");	
 			dogLover obj1 = new dogLover();
 			obj1.Display();
 		
+			System.out.println("Cat");
 		        catLover obj2 = new catLover();
 			obj2.Display();
 	
+			System.out.println("Horse");
 			horseLover obj3 = new horseLover();
 			obj3.Display();	
 		
+			System.out.println("Multilevel Puppy obj");
 			puppy obj4 = new puppy();
 			obj4.Display();
 		
+			System.out.println("Multilevel Kitten obj");
 			kitten obj5 = new kitten();
 			obj5.Display();
 	

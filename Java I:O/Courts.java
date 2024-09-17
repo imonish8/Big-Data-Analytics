@@ -1,14 +1,26 @@
-
-
+import java.util.*;
+/*
+class Supreme1{
+	private static int priv1= 1;
+	private static int priv2 =2;
+	
+	void Display3(){
+		System.out.println("Private to Supreme1: "+priv1);
+		System.out.println("Private to Supreme1: "+priv1);
+	
+	}
+}
+*/
 class Supreme{
-	private String Suo_Motu;
-	private String Constit_review;
+	private static String Suo_Motu;
+	private static String Constit_review;
 
 	String hearing_case;
 	String Granting_bail;
 
 	private String Level;
 
+	
 	Supreme(){
 		Suo_Motu = "Power Remains to Supreme court only, This should not be printed on anyther child objects";
 		Constit_review = "Power Remains to Supreme Court only, Not accessible to child objects.";
@@ -18,16 +30,14 @@ class Supreme{
 		}
 	void Display(){
 
-// why printing when declared private ?
-//any solution ? protected ????
-
-		System.out.println("Power remains to Supreme Court Only, that is "+Suo_Motu);
-		System.out.println("Power remains to Supreme Court only, That is "+Constit_review);
-		System.out.println("Unique to this court, that is :"+Level);
 		
-// ok
-		System.out.println("Common to all Courts, That is :"+hearing_case);
-		System.out.println("Common to all Courts, that is :"+Granting_bail);
+			if(this.getClass() == Supreme.class){
+                                 System.out.println("Power remains to Supreme Court Only, that is "+Suo_Motu);
+                                 System.out.println("Power remains to Supreme Court only, That is "+Constit_review);
+				 System.out.println("Unique to this court, that is :"+Level);
+                        }
+				 System.out.println("Common to all Courts, That is :"+hearing_case);
+				 System.out.println("Common to all Courts, that is :"+Granting_bail);
 		
 		
 		}
@@ -35,17 +45,17 @@ class Supreme{
 	}
 
 class High extends Supreme{
-	//state
-	String Level;
+		//state
+		String Level;
 
-	High(){
-		super();
-		Level = "State Level";
-		}
-	void Display(){
-		super.Display();
-		System.out.println("High Court Power");
-		System.out.println("Unique to High Court, that is, "+Level);
+		High(){
+			super();
+			Level = "State Level";
+			}
+		void Display(){
+			super.Display();
+			System.out.println("High Court Power");
+			System.out.println("Unique to High Court, that is, "+Level);
 		
 		}
 		
@@ -109,23 +119,28 @@ class People extends Supreme{
 public class Courts {
 		public static void main(String[] args){
 
-	//	Supreme obj1 = new Supreme();
-	//	obj1.Display();
+		//Supreme obj1 = new Supreme();
+		//obj1.Display1();
 	
-	//	High obj2 = new High();
-	//	obj2.Display();
+		//High obj2 = new High();
+		//obj2.Display();
 	
-		Subordinate obj3 = new Subordinate();
-		obj3.Display();
-	/*
-		District obj4 - new District();
-		obj4.Display();
+		//Subordinate obj3 = new Subordinate();
+		//obj3.Display();
+	
+		//District obj4 - new District();
+		//obj4.Display();
 
-		SpecializedTribunal obj5 = new SpecializedTribunal();
-		obj5.Display();
+		//SpecializedTribunal obj5 = new SpecializedTribunal();
+		//obj5.Display();
 	
 		People obj6 = new People();
+		//obj6.Display();
 		obj6.Display();
-	*/
+
+		//Supreme.Display1();
+		
+		//Supreme1 s1 = new Supreme1();
+		//s1.Display3();
 	}		
 }
