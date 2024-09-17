@@ -1,0 +1,406 @@
+Last login: Tue Sep 17 19:35:58 on ttys001
+
+
+✅ mysql> SHOW DATABASES;
+
++--------------------+
+| Database           |
++--------------------+
+| black_stone        |
+| empDB              |
+| Hogwarts_School    |
+| HOTEL_DATA         |
+| HOTEL_DB           |
+| information_schema |
+| JobsDB             |
+| my_first_db        |
+| mysql              |
+| performance_schema |
+| pushups            |
+| school_DB          |
+| sys                |
+| UsersData          |
++--------------------+
+14 rows in set (0.04 sec)
+
+
+✅ mysql> use pushups;
+
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+
+✅ mysql> show tables;
+
++-------------------+
+| Tables_in_pushups |
++-------------------+
+| PushTypes         |
++-------------------+
+1 row in set (0.00 sec)
+
+
+✅ mysql> DESC PushTypes;
+
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| Sr_No    | int          | NO   | PRI | NULL    | auto_increment |
+| TypePush | varchar(100) | YES  |     | NULL    |                |
+| DateDone | varchar(100) | YES  |     | NULL    |                |
+| Reps     | int          | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+
+✅ mysql> SELECT * FROM PushTypes;
+
++-------+----------+--------------+------+
+| Sr_No | TypePush | DateDone     | Reps |
++-------+----------+--------------+------+
+|     1 | Regular  | 16 Sept 2024 | NULL |
+|     2 | Regular  | 16 Sept 2024 |   70 |
++-------+----------+--------------+------+
+2 rows in set (0.00 sec)
+
+‼️ mysql> INSERT INTO PushTypes (TypePush, ❗️DataDone❗️, Reps) VALUES (
+    -> "Regular", "16 Sept 2024", "30"),
+    -> ("Regular", "17 Sept 2024", "50"),("Regular", "17 Sept 2024");
+ERROR 1054 (42S22): Unknown column 'DataDone' in 'field list'
+mysql> INSERT INTO PushTypes (TypePush, DataDone, Reps) VALUES ( "Regular", "16 Sept 2024", 30), ("Regular", "17 Sept 2024", 50),("Regular", "17 Sept 2024"); 
+ERROR 1054 (42S22): Unknown column 'DataDone' in 'field list'
+mysql> INSERT INTO PushTypes (TypePush, DateDone, Reps) VALUES ( "Regular", "16 Sept 2024", 30), ("Regular", "17 Sept 2024", 50),("Regular", "17 Sept 2024");
+ERROR 1136 (21S01): Column count doesn't match value count at row 3
+mysql> INSERT INTO PushTypes (TypePush, DateDone, Reps) VALUES ( "Regular", "16 Sept 2024", 30), ("Regular", "17 Sept 2024", 50),("Regular", "17 Sept 2024",00); 
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+✅ mysql> SELECT * FROM PushTypes;
+
++-------+----------+--------------+------+
+| Sr_No | TypePush | DateDone     | Reps |
++-------+----------+--------------+------+
+|     1 | Regular  | 16 Sept 2024 | NULL |
+|     2 | Regular  | 16 Sept 2024 |   70 |
+|     3 | Regular  | 16 Sept 2024 |   30 |
+|     4 | Regular  | 17 Sept 2024 |   50 |
+|     5 | Regular  | 17 Sept 2024 |    0 |
++-------+----------+--------------+------+
+5 rows in set (0.00 sec)
+
+
+mysql> EXIT;
+Bye
+
+✅ mysql> CREATE DATABASE BlackRock;
+
+Query OK, 1 row affected (0.02 sec)
+
+✅ mysql> USE BlackRock;
+Database changed
+
+✅ mysql> CREATE TABLE Companies (cid INT PRIMARY KEY AUTO_INCREMENT, cname VARCHAR(100), Funding INT);
+
+Query OK, 0 rows affected (0.02 sec)
+
+✅ mysql> DESCRIBE Companies;
+
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| cid     | int          | NO   | PRI | NULL    | auto_increment |
+| cname   | varchar(100) | YES  |     | NULL    |                |
+| Funding | int          | YES  |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+✅ mysql> SELECT * FROM Companies;
+
+Empty set (0.01 sec)
+
+✅ mysql> INSERT INTO Companies (cname,Funding) 
+    -> VALUES 
+    -> ("Apple",171),
+    -> ("Microsoft",155),
+    -> ("Amazon",63),
+    -> ("Nvidia", 51),
+    -> ("Alphabet", 44),
+    -> ("Google", 38),
+    -> ("Tesla", 37),
+    -> ("UnitedHealthGroup",35),
+    -> ("Meta", 32),
+    -> ("BerkshireHathway",32);
+
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+✅ mysql> SELECT * FROM Companies;                                                 
+
++-----+-------------------+---------+
+| cid | cname             | Funding |
++-----+-------------------+---------+
+|   1 | Apple             |     171 |
+|   2 | Microsoft         |     155 |
+|   3 | Amazon            |      63 |
+|   4 | Nvidia            |      51 |
+|   5 | Alphabet          |      44 |
+|   6 | Google            |      38 |
+|   7 | Tesla             |      37 |
+|   8 | UnitedHealthGroup |      35 |
+|   9 | Meta              |      32 |
+|  10 | BerkshireHathway  |      32 |
++-----+-------------------+---------+
+
+10 rows in set (0.00 sec)
+
+✅ mysql> INSERT INTO Companies (cname,Funding)  VALUES  ("__BlackRock__",9400);
+
+Query OK, 1 row affected (0.00 sec)
+
+✅ mysql> SELECT * FROM Companies;
+
++-----+-------------------+---------+
+| cid | cname             | Funding |
++-----+-------------------+---------+
+|   1 | Apple             |     171 |
+|   2 | Microsoft         |     155 |
+|   3 | Amazon            |      63 |
+|   4 | Nvidia            |      51 |
+|   5 | Alphabet          |      44 |
+|   6 | Google            |      38 |
+|   7 | Tesla             |      37 |
+|   8 | UnitedHealthGroup |      35 |
+|   9 | Meta              |      32 |
+|  10 | BerkshireHathway  |      32 |
+|  11 | __BlackRock__     |    9400 |
++-----+-------------------+---------+
+11 rows in set (0.00 sec)
+
+✅ mysql> ALTER TABLE Companies ADD COLUMN Reserves_B INT;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 166 WHERE cid = 1;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 111 WHERE cid = 2;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 64 WHERE cid = 3;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 118 WHERE cid = 4;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 40 WHERE cid = 5;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 16 WHERE cid = 6;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 24 WHERE cid = 7;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 147 WHERE cid = 8;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 9400 WHERE cid = 9;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> SELECT * FROM Companies;
+
++-----+-------------------+---------+------------+
+| cid | cname             | Funding | Reserves_B |
++-----+-------------------+---------+------------+
+|   1 | Apple             |     171 |        166 |
+|   2 | Microsoft         |     155 |        111 |
+|   3 | Amazon            |      63 |         64 |
+|   4 | Nvidia            |      51 |        118 |
+|   5 | Alphabet          |      44 |         40 |
+|   6 | Google            |      38 |         16 |
+|   7 | Tesla             |      37 |         24 |
+|   8 | UnitedHealthGroup |      35 |        147 |
+|   9 | Meta              |      32 |       9400 |
+|  10 | BerkshireHathway  |      32 |       NULL |
+|  11 | __BlackRock__     |    9400 |       NULL |
++-----+-------------------+---------+------------+
+
+11 rows in set (0.00 sec)
+
+✅ mysql> UPDATE Companies SET Reserves_B = 16 WHERE cid = 4;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 118 WHERE cid = 5;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 118 WHERE cid = 6;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 24 WHERE cid = 7;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 29 WHERE cid = 8;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 40 WHERE cid = 9;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 147 WHERE cid = 10;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> UPDATE Companies SET Reserves_B = 9400 WHERE cid = 11;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+✅ mysql> SELECT * FROM Companies;
+
++-----+-------------------+---------+------------+
+| cid | cname             | Funding | Reserves_B |
++-----+-------------------+---------+------------+
+|   1 | Apple             |     171 |        166 |
+|   2 | Microsoft         |     155 |        111 |
+|   3 | Amazon            |      63 |         64 |
+|   4 | Nvidia            |      51 |         16 |
+|   5 | Alphabet          |      44 |        118 |
+|   6 | Google            |      38 |        118 |
+|   7 | Tesla             |      37 |         24 |
+|   8 | UnitedHealthGroup |      35 |         29 |
+|   9 | Meta              |      32 |         40 |
+|  10 | BerkshireHathway  |      32 |        147 |
+|  11 | __BlackRock__     |    9400 |       9400 |
++-----+-------------------+---------+------------+
+
+11 rows in set (0.00 sec)
+
+🚩 mysql> SELECT cname FROM 🚩Compnaies🚩 WHERE Reserves_B > 100;
+ERROR 1146 (42S02): Table 'blackrock.compnaies' doesn't exist
+
+✅ mysql> SELECT cname FROM Companies WHERE Reserves_B > 100;
+
++------------------+
+| cname            |
++------------------+
+| Apple            |
+| Microsoft        |
+| Alphabet         |
+| Google           |
+| BerkshireHathway |
+| __BlackRock__    |
++------------------+
+6 rows in set (0.00 sec)
+
+✅ mysql> SELECT cid,cname FROM Companies WHERE Reserves_B > 100;
+
++-----+------------------+
+| cid | cname            |
++-----+------------------+
+|   1 | Apple            |
+|   2 | Microsoft        |
+|   5 | Alphabet         |
+|   6 | Google           |
+|  10 | BerkshireHathway |
+|  11 | __BlackRock__    |
++-----+------------------+
+6 rows in set (0.00 sec)
+
+✅ mysql> CREATE TABLE Dupe AS SELECT * FROM Companies;
+Query OK, 11 rows affected (0.01 sec)
+Records: 11  Duplicates: 0  Warnings: 0
+
+✅ mysql> SELECT * FROM Dupe;
++-----+-------------------+---------+------------+
+| cid | cname             | Funding | Reserves_B |
++-----+-------------------+---------+------------+
+|   1 | Apple             |     171 |        166 |
+|   2 | Microsoft         |     155 |        111 |
+|   3 | Amazon            |      63 |         64 |
+|   4 | Nvidia            |      51 |         16 |
+|   5 | Alphabet          |      44 |        118 |
+|   6 | Google            |      38 |        118 |
+|   7 | Tesla             |      37 |         24 |
+|   8 | UnitedHealthGroup |      35 |         29 |
+|   9 | Meta              |      32 |         40 |
+|  10 | BerkshireHathway  |      32 |        147 |
+|  11 | __BlackRock__     |    9400 |       9400 |
++-----+-------------------+---------+------------+
+11 rows in set (0.00 sec)
+
+✅ mysql> DELETE FROM DUPE WHERE cname = "Google";
+Query OK, 1 row affected (0.01 sec)
+
+✅ mysql> SELECT * FROM Dupe;
++-----+-------------------+---------+------------+
+| cid | cname             | Funding | Reserves_B |
++-----+-------------------+---------+------------+
+|   1 | Apple             |     171 |        166 |
+|   2 | Microsoft         |     155 |        111 |
+|   3 | Amazon            |      63 |         64 |
+|   4 | Nvidia            |      51 |         16 |
+|   5 | Alphabet          |      44 |        118 |
+|   7 | Tesla             |      37 |         24 |
+|   8 | UnitedHealthGroup |      35 |         29 |
+|   9 | Meta              |      32 |         40 |
+|  10 | BerkshireHathway  |      32 |        147 |
+|  11 | __BlackRock__     |    9400 |       9400 |
++-----+-------------------+---------+------------+
+10 rows in set (0.00 sec)
+
+✅ mysql> SELECT * FROM Companies WHERE cname LIKE "M%";
++-----+-----------+---------+------------+
+| cid | cname     | Funding | Reserves_B |
++-----+-----------+---------+------------+
+|   2 | Microsoft |     155 |        111 |
+|   9 | Meta      |      32 |         40 |
++-----+-----------+---------+------------+
+2 rows in set (0.00 sec)
+
+✅ mysql> SELECT * FROM Companies WHERE cname LIKE "M%" AND Funding > 100;
++-----+-----------+---------+------------+
+| cid | cname     | Funding | Reserves_B |
++-----+-----------+---------+------------+
+|   2 | Microsoft |     155 |        111 |
++-----+-----------+---------+------------+
+1 row in set (0.00 sec)
+
+✅ mysql> ALTER TABLE Dupe RENAME COLUMN Funding TO FundsRecieved;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+✅ mysql> SELECT * FROM Dupe;
++-----+-------------------+---------------+------------+
+| cid | cname             | FundsRecieved | Reserves_B |
++-----+-------------------+---------------+------------+
+|   1 | Apple             |           171 |        166 |
+|   2 | Microsoft         |           155 |        111 |
+|   3 | Amazon            |            63 |         64 |
+|   4 | Nvidia            |            51 |         16 |
+|   5 | Alphabet          |            44 |        118 |
+|   7 | Tesla             |            37 |         24 |
+|   8 | UnitedHealthGroup |            35 |         29 |
+|   9 | Meta              |            32 |         40 |
+|  10 | BerkshireHathway  |            32 |        147 |
+|  11 | __BlackRock__     |          9400 |       9400 |
++-----+-------------------+---------------+------------+
+10 rows in set (0.00 sec)
+
+✅ mysql> ALTER TABLE Dupe RENAME COLUMN Reserves_B TO SittingCash;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> 
