@@ -1,0 +1,231 @@
+Last login: Thu Sep 19 17:08:28 on ttys000
+imonish8@MonishMacintosh ~ % mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 39
+Server version: 8.0.39 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| black_stone        |
+| BlackRock          |
+| empDB              |
+| Hogwarts_School    |
+| HOTEL_DATA         |
+| HOTEL_DB           |
+| information_schema |
+| JobsDB             |
+| MASTERCHEF         |
+| my_first_db        |
+| mysql              |
+| performance_schema |
+| pushups            |
+| school_DB          |
+| sys                |
+| UsersData          |
++--------------------+
+16 rows in set (0.00 sec)
+
+mysql> USE MASTERCHEF;
+Database changed
+mysql> SHOW TABLES;
+Empty set (0.01 sec)
+
+mysql> SHOW TABLE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> SELECT * FROM FOOD;
+ERROR 1146 (42S02): Table 'masterchef.food' doesn't exist
+mysql> CREATE TABLE EMPLOYEE (EMP_ID INT PRIMARY KEY, EMP_NAME VARCHAR(100) NOT NULL);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> INSERT INTO EMPLOYEE VALUES
+    -> (101,"Jack"),
+    -> (102,"Rachel"),
+    -> (103,"Kate"),
+    -> (104,"Ron");
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM EMPLOYEE;
++--------+----------+
+| EMP_ID | EMP_NAME |
++--------+----------+
+|    101 | Jack     |
+|    102 | Rachel   |
+|    103 | Kate     |
+|    104 | Ron      |
++--------+----------+
+4 rows in set (0.00 sec)
+
+mysql> INSERT INTO EMPLOYEE VALUES (105,"MAC"), (106,"NAC"), (107,"Mate"), (108,"Eon"),(109, "Raj"), (110, "Mahesh");
+Query OK, 6 rows affected (0.00 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM EMPLOYEE;
++--------+----------+
+| EMP_ID | EMP_NAME |
++--------+----------+
+|    101 | Jack     |
+|    102 | Rachel   |
+|    103 | Kate     |
+|    104 | Ron      |
+|    105 | MAC      |
+|    106 | NAC      |
+|    107 | Mate     |
+|    108 | Eon      |
+|    109 | Raj      |
+|    110 | Mahesh   |
++--------+----------+
+10 rows in set (0.00 sec)
+
+mysql> CREATE TABLE INGREDIENTS (INGRI_ID INT PRIMARY KEY, INGRI_NAME VARCHAR(100) NOT NULL);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> 
+mysql> INSERT INTO INGREDIENTS VALUES
+    -> (21,"Masala"),
+    -> (22,"Onion"),
+    -> (23,"Maggie"),
+    -> (24,"Pizza"),
+    -> (25,"Coffee"),
+    -> (26,"Salt"),
+    -> (27,"Sugar"),
+    -> (28,"Veggies"),
+    -> (29,"Fruits"),
+    -> (30,"Knife");
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM INGREDIENTS;
++----------+------------+
+| INGRI_ID | INGRI_NAME |
++----------+------------+
+|       21 | Masala     |
+|       22 | Onion      |
+|       23 | Maggie     |
+|       24 | Pizza      |
+|       25 | Coffee     |
+|       26 | Salt       |
+|       27 | Sugar      |
+|       28 | Veggies    |
+|       29 | Fruits     |
+|       30 | Knife      |
++----------+------------+
+10 rows in set (0.00 sec)
+
+mysql> CREATE TABLE FOOD (FOOD_ID INT PRIMARY KEY, FOOD_NAME VARCHAR(100) NOT NULL);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> INSERT INTO FOOD VALUES 
+    -> (51, "Sitafal"),
+    -> (52, "Ramfal"),
+    -> (53, "Apple"),
+    -> (54, "Watermelon"),
+    -> (55, "Pineapple"),
+    -> (56, "Dragon fruit"),
+    -> (57, "Avocado"),
+    -> (58, "Pomograte"),
+    -> (59, "Muskmelon"),
+    -> (60, "Jackfruit"),
+    -> (61, "Orange");
+Query OK, 11 rows affected (0.00 sec)
+Records: 11  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM FOOD;
++---------+--------------+
+| FOOD_ID | FOOD_NAME    |
++---------+--------------+
+|      51 | Sitafal      |
+|      52 | Ramfal       |
+|      53 | Apple        |
+|      54 | Watermelon   |
+|      55 | Pineapple    |
+|      56 | Dragon fruit |
+|      57 | Avocado      |
+|      58 | Pomograte    |
+|      59 | Muskmelon    |
+|      60 | Jackfruit    |
+|      61 | Orange       |
++---------+--------------+
+11 rows in set (0.00 sec)
+
+mysql> SELECT * FROM EMPLOYEE;
++--------+----------+
+| EMP_ID | EMP_NAME |
++--------+----------+
+|    101 | Jack     |
+|    102 | Rachel   |
+|    103 | Kate     |
+|    104 | Ron      |
+|    105 | MAC      |
+|    106 | NAC      |
+|    107 | Mate     |
+|    108 | Eon      |
+|    109 | Raj      |
+|    110 | Mahesh   |
++--------+----------+
+10 rows in set (0.01 sec)
+
+mysql> SELECT * FROM COOK;
++---------+--------+
+| FOOD_ID | EMP_ID |
++---------+--------+
+|      51 |    101 |
+|      52 |    102 |
+|      53 |    103 |
+|      54 |    104 |
+|      55 |    105 |
+|      56 |    106 |
+|      57 |    107 |
+|      58 |    108 |
+|      59 |    109 |
+|      60 |    110 |
++---------+--------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT * FROM INGREDIENTS;
++----------+------------+
+| INGRI_ID | INGRI_NAME |
++----------+------------+
+|       21 | Masala     |
+|       22 | Onion      |
+|       23 | Maggie     |
+|       24 | Pizza      |
+|       25 | Coffee     |
+|       26 | Salt       |
+|       27 | Sugar      |
+|       28 | Veggies    |
+|       29 | Fruits     |
+|       30 | Knife      |
++----------+------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT * FROM RECIPE
+    -> ;
++---------+----------+
+| FOOD_ID | INGRI_ID |
++---------+----------+
+|      51 |       21 |
+|      52 |       22 |
+|      53 |       23 |
+|      54 |       24 |
+|      55 |       25 |
+|      56 |       26 |
+|      57 |       27 |
+|      58 |       28 |
+|      59 |       29 |
+|      60 |       30 |
++---------+----------+
+10 rows in set (0.00 sec)
+
+mysql> 

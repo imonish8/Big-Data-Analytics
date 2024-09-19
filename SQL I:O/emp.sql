@@ -1,6 +1,22 @@
 use empDB;
 SELECT * FROM emp;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 INSERT INTO emp 
 VALUES
 (3013, 'Josh', 'CA', 'QA',90330),
