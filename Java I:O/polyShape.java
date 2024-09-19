@@ -1,77 +1,97 @@
 import java.util.*;
-class Shape
+interface Shape
 {
 	static double PI=3.14d;
-	double area;
-	double circumference;
+	//double area = 1.0d;
+	//double circumference= 1.0d;
 
-		void area()
-	{
-	}
-		void circumference()
-		{
-		}
+		void area();
+		void circumference();
+		
+		/*
 		void display()
 		{
 		System.out.println("Area is "+area);
 		System.out.println("Circumference is "+circumference);
 		}
+		*/
+		void Display();
 		}
 
-class Circle extends Shape
+class Circle implements Shape
 	{
 		float radius;
+		double area;
+		double circumference;
 		Circle(float radius)
 	{
 		this.radius=radius;
 	}
-	void area()
+	public void area()
 	{
 		area=PI*radius*radius;
 	}
 
-	void circumference()
+	public void circumference()
 	{
 	circumference=2*PI*radius;
 	}
+	public void Display(){
+		System.out.println("Area of the Circle is "+area);
+		System.out.println("Circumference of the circle is "+circumference);
+	}
 	}
 
-class Rectangle extends Shape
+class Rectangle implements Shape
+
 	{
 		float length,breadth;
+		double area;
+		double circumference;
 	Rectangle(float length,float breadth)
 	{
 		this.length=length;
 		this.breadth=breadth;
 	}
-	void area()
+	public void area()
 	{
 	area=length*breadth;
 	}
-	void circumference()
+	public void circumference()
 	{
 	circumference=2*(length+breadth);
 	}
+	public void Display(){
+                System.out.println("Area of the Rectangle is "+area);
+                System.out.println("Circumference of the Rectangle is "+circumference);
+        }
+	
 	}
 
-	class Square extends Shape
+	class Square implements Shape
 	{
 	float side;
+	double area;
+	double circumference;
 	Square(float side)
 	{
 		this.side=side;
 	}
-	void area()
+	public void area()
 	{
 	area=side*side;
 	}
-	void circumference()
+	public void circumference()
 	{
 	circumference=4*side;
 	}
+	public void Display(){
+                System.out.println("Area of the Square is "+area);
+                System.out.println("Circumference of the Square is "+circumference);
+        }
 	}
 
-class polyShape
+class polyshape
 {
 	public static void main(String args[])
 	{
@@ -120,7 +140,7 @@ class polyShape
 
 		s.area();
 		s.circumference();
-		s.display();
+		s.Display();
 
 
 	}	

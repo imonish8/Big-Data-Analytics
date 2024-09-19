@@ -32,6 +32,8 @@ class Supreme{
 
 		
 			if(this.getClass() == Supreme.class){
+			//if(this.getObject() == obj1 ){
+			//if(this.getObject() == obj1.Object){
                                  System.out.println("Power remains to Supreme Court Only, that is "+Suo_Motu);
                                  System.out.println("Power remains to Supreme Court only, That is "+Constit_review);
 				 System.out.println("Unique to this court, that is :"+Level);
@@ -119,8 +121,8 @@ class People extends Supreme{
 public class Courts {
 		public static void main(String[] args){
 
-		//Supreme obj1 = new Supreme();
-		//obj1.Display1();
+		Supreme obj1 = new Supreme();
+		obj1.Display();
 	
 		//High obj2 = new High();
 		//obj2.Display();
