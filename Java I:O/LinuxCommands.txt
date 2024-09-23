@@ -1,9 +1,0 @@
-1. to install applicatons
-	`sudo apt-get install app_name`
-2.To Update the sudo itself.
-	` sudo update `
-3. basic file handling commands.
-	`cd` `pwd` `touch` `nano` `mkdir` `ls` `mv` `cp` `ed` ` . open`
-4. basic installation Bootable USB Drive
-	Ubuntu iso file with Rufus USB Drive.
-5. Learning...
