@@ -1,0 +1,192 @@
+Last login: Tue Sep 24 10:25:11 on ttys005
+imonish8@MoMac Java I:O % nano ThreadEx.java
+imonish8@MoMac Java I:O % javac ThreadEx.java
+ThreadEx.java:11: error: ')' or ',' expected
+		System.out.println(T2 Runnning "+t2.getName());
+		                     ^
+ThreadEx.java:11: error: unclosed string literal
+		System.out.println(T2 Runnning "+t2.getName());
+		                               ^
+ThreadEx.java:11: error: not a statement
+		System.out.println(T2 Runnning "+t2.getName());
+		                      ^
+3 errors
+imonish8@MoMac Java I:O % nano ThreadEx.java 
+imonish8@MoMac Java I:O % javac ThreadEx.java
+ThreadEx.java:1: error: ThreadEx is not abstract and does not override abstract method run() in Runnable
+class ThreadEx implements Runnable{
+^
+1 error
+imonish8@MoMac Java I:O % nano ThreadEx.java 
+imonish8@MoMac Java I:O % javac ThreadEx.java
+imonish8@MoMac Java I:O % java ThreadEx     
+T 1 Running Thread 1 running
+T2 Runnning Thread 2 Running
+imonish8@MoMac Java I:O % cat ThreadEx.java 
+class ThreadEx implements Runnable{
+	public static void main(String[] args){
+		
+		Thread t1 = new Thread("Thread 1 running");
+		Thread t2 = new Thread("Thread 2 Running");
+	
+		t1.start();
+		t2.start();
+		
+		System.out.println("T 1 Running "+t1.getName());	
+		System.out.println("T2 Runnning "+t2.getName());
+	}
+	
+	public void run(){
+	
+	}
+}
+imonish8@MoMac Java I:O % nano ThreadEx.java 
+imonish8@MoMac Java I:O % javac ThreadEx.java
+imonish8@MoMac Java I:O % java ThreadEx     
+T 1 Running Thread 1 running
+T2 Runnning Thread 2 Running
+imonish8@MoMac Java I:O % nano ThreadEx.java 
+imonish8@MoMac Java I:O % javac ThreadEx.java
+ThreadEx.java:16: error: cannot find symbol
+		System.out.println(temp.getName().currentThread());	
+		                                 ^
+  symbol:   method currentThread()
+  location: class String
+1 error
+imonish8@MoMac Java I:O % cp ThreadEx.java ThreadEx1.java  
+imonish8@MoMac Java I:O % nano ThreadEx1.java
+imonish8@MoMac Java I:O % javac ThreadEx1.java       
+ThreadEx1.java:1: error: interface expected here
+class ThreadEx implements Thread{
+                          ^
+ThreadEx1.java:16: error: cannot find symbol
+		System.out.println(temp.getName().currentThread());	
+		                                 ^
+  symbol:   method currentThread()
+  location: class String
+2 errors
+imonish8@MoMac Java I:O % nano ThreadEx1.java 
+imonish8@MoMac Java I:O % javac ThreadEx1.java
+ThreadEx1.java:1: error: interface expected here
+class ThreadEx implements Thread{
+                          ^
+1 error
+imonish8@MoMac Java I:O % nano ThreadEx1.java 
+imonish8@MoMac Java I:O % javac ThreadEx1.java
+ThreadEx1.java:1: error: interface expected here
+class ThreadEx implements Thread{
+                          ^
+ThreadEx1.java:3: error: cannot find symbol
+		Thread(String );
+		       ^
+  symbol:   variable String
+  location: class ThreadEx
+ThreadEx1.java:4: error: call to super must be first statement in constructor
+		super();
+		     ^
+3 errors
+imonish8@MoMac Java I:O % nano ThreadEx1.java 
+imonish8@MoMac Java I:O % javac ThreadEx1.java
+ThreadEx1.java:3: error: ')' or ',' expected
+		Thread(String name );
+		             ^
+ThreadEx1.java:3: error: not a statement
+		Thread(String name );
+		              ^
+ThreadEx1.java:3: error: ';' expected
+		Thread(String name );
+		                  ^
+3 errors
+imonish8@MoMac Java I:O % nano ThreadEx1.java 
+imonish8@MoMac Java I:O % javac ThreadEx1.java
+ThreadEx1.java:3: error: ')' or ',' expected
+		Thread(String name ){
+		             ^
+ThreadEx1.java:3: error: not a statement
+		Thread(String name ){
+		              ^
+ThreadEx1.java:3: error: ';' expected
+		Thread(String name ){
+		                  ^
+3 errors
+imonish8@MoMac Java I:O % nano ThreadEx.java           
+imonish8@MoMac Java I:O % javac ThreadEx.java
+ThreadEx.java:16: error: cannot find symbol
+		System.out.println(temp.getName().currentThread());	
+		                                 ^
+  symbol:   method currentThread()
+  location: class String
+1 error
+imonish8@MoMac Java I:O % nano ThreadEx.java 
+imonish8@MoMac Java I:O % javac ThreadEx.java
+imonish8@MoMac Java I:O % java ThreadEx      
+T 1 Running Thread 1 running
+T2 Runnning Thread 2 Running
+imonish8@MoMac Java I:O % cat ThreadEx.java
+class ThreadEx implements Runnable{
+	public static void main(String[] args){
+		
+		Thread t1 = new Thread("Thread 1 running");
+		Thread t2 = new Thread("Thread 2 Running");
+	
+		t1.start();
+		t2.start();
+		
+		System.out.println("T 1 Running "+t1.getName());	
+		System.out.println("T2 Runnning "+t2.getName());
+	}
+	
+	public void run(){
+		Thread temp = Thread.currentThread();
+		//System.out.println(temp.getName().currentThread());
+		System.out.println(temp.getName());	
+	}
+}
+imonish8@MoMac Java I:O % nano ThreadEx.java 
+imonish8@MoMac Java I:O % javac ThreadEx.java
+ThreadEx.java:17: error: unreported exception InterruptedException; must be caught or declared to be thrown
+		temp.sleep(5000);
+		          ^
+1 error
+imonish8@MoMac Java I:O % nano ThreadEx.java 
+imonish8@MoMac Java I:O % javac ThreadEx.java
+ThreadEx.java:8: error: unreported exception InterruptedException; must be caught or declared to be thrown
+		t1.sleep(5000);
+		        ^
+1 error
+imonish8@MoMac Java I:O % nano ThreadEx.java 
+imonish8@MoMac Java I:O % javac ThreadEx.java
+imonish8@MoMac Java I:O % java ThreadEx     
+Exception in thread "main" java.lang.IllegalThreadStateException
+	at java.base/java.lang.Thread.start(Thread.java:1525)
+	at ThreadEx.main(ThreadEx.java:10)
+imonish8@MoMac Java I:O % nano ThreadEx.java 
+imonish8@MoMac Java I:O % cat ThreadEx.java
+class ThreadEx implements Runnable{
+	public static void main(String[] args){
+		
+		Thread t1 = new Thread("Thread 1 running");
+		Thread t2 = new Thread("Thread 2 Running");
+	
+		t1.start();
+		try{
+			t1.sleep(5000);
+			t1.start();
+		}catch(InterruptedException e){
+
+			System.out.println("Sleep doesnt make sense");
+		}	
+		t2.start();
+		
+		System.out.println("T 1 Running "+t1.getName());	
+		System.out.println("T2 Runnning "+t2.getName());
+	}
+	
+	public void run(){
+		Thread temp = Thread.currentThread();
+		//System.out.println(temp.getName().currentThread());
+		//temp.sleep(5000);
+		System.out.println(temp.getName());	
+	}
+}
+imonish8@MoMac Java I:O % 
