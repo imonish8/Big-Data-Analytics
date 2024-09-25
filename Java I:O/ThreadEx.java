@@ -5,13 +5,14 @@ class ThreadEx implements Runnable{
 		Thread t2 = new Thread("Thread 2 Running");
 	
 		t1.start();
-		try{
+		
+		/*try{
 			t1.sleep(5000);
 			t1.start();
 		}catch(InterruptedException e){
 
 			System.out.println("Sleep doesnt make sense");
-		}	
+		}*/	
 		t2.start();
 		
 		System.out.println("T 1 Running "+t1.getName());	
