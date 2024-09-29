@@ -3,6 +3,7 @@ public class FileWrite {
 	public static void main(String[] args) {
 
 	try{
+<<<<<<< HEAD:Java/FileWrite.java
 		// using class file will open file.
 		File f1 = new File("MyFileRead.txt");
 		
@@ -13,6 +14,12 @@ public class FileWrite {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		
+=======
+		File f1 = new File("MyFileRead.txt");
+		FileWriter fw = new FileWriter(f1);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+>>>>>>> 4bff3f2 (FILE HANDLING):Java I:O/FileWrite.java
 		String str;
 		while(true){
 			str = br.readLine();
