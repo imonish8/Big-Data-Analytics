@@ -1,0 +1,78 @@
+Last login: Tue Oct  1 05:06:19 on console
+imonish8@MoMac ~ % mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 24
+Server version: 8.0.39 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE USER "Monish1"@"localhost" IDENTIFIED BY "PASS123";
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> GRANT UPDATE , DELETE ON BLACKROCK TO "Monish1"@"localhost";
+ERROR 1046 (3D000): No database selected
+mysql> GRANT UPDATE , DELETE ON BLACKROCK.db TO "Monish1"@"localhost";
+ERROR 1146 (42S02): Table 'blackrock.db' doesn't exist
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| black_stone        |
+| black_stone1       |
+| BlackRock          |
+| empDB              |
+| Hogwarts_School    |
+| HOTEL_DATA         |
+| HOTEL_DB           |
+| information_schema |
+| JobsDB             |
+| LAB_QP             |
+| MASTERCHEF         |
+| my_first_db        |
+| mysql              |
+| performance_schema |
+| pushups            |
+| school_DB          |
+| SQL_ASSIGNMENT     |
+| sys                |
+| UsersData          |
++--------------------+
+19 rows in set (0.00 sec)
+
+mysql> GRANT UPDATE , DELETE ON empDB TO "Monish1"@"localhost";
+ERROR 1046 (3D000): No database selected
+mysql> USE EMPDB;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> GRANT UPDATE , DELETE ON empDB TO "Monish1"@"localhost";
+ERROR 1146 (42S02): Table 'empdb.empDB' doesn't exist
+mysql> GRANT UPDATE , DELETE ON airlines.empDB TO "Monish1"@"localhost";
+ERROR 1146 (42S02): Table 'airlines.empDB' doesn't exist
+mysql> GRANT UPDATE , DELETE ON empDB.airlines TO "Monish1"@"localhost";
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> GRANT SELECT ON EMPDB.AIRLINES TO "Monish1"@"localhost";
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE USER "MONISH2"@"localhost" IDENTIFIED BY "PASS123";
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> GRANT SELECT, DELETE ON EMPDB.AIRLINES TO "MONISH2"@"localhost";
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> GRANT UPDATE  ON EMPDB.AIRLINES TO "MONISH2"@"localhost";
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> REVOKE UPDATE  ON EMPDB.AIRLINES FROM "MONISH2"@"localhost";
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> 
