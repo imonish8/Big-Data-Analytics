@@ -8,7 +8,7 @@ print("sum of two nums is :",res)
 
 # void function
 def printMsg(msg):
-                        """ Print Message Function """
+                        """ Print MessageFunction """
                         print("Message is :"+msg)
                         return -1
 print()
@@ -196,6 +196,7 @@ from functools import reduce
 list_fun = [123,444,623,578,335]
 res = reduce(lambda x,y : x+y, list_fun)
 print(res)
+
 
 
 
