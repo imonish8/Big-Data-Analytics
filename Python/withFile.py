@@ -1,6 +1,6 @@
 bytes_data =b"\x21"
 try:
-    with open(" ", "wb") as fp:
+    with open(" /Users/imonish8/Desktop/t2/test1.txt ", "wb") as fp:
         fp.write(bytes_data)
         fp.close()
 except FileNotFoundError:
