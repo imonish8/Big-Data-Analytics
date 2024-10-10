@@ -1,0 +1,16 @@
+def rotateElement(var):
+	last = var.pop()
+	
+	var[0] = last
+	print(var)
+
+
+userList = []
+n = int(input("Enter lenght of list")
+
+for i in range(n):
+	element = int(input("Enter element for ", i, " Position "))
+	userList.append(element)
+
+rotateElement(userList)
+

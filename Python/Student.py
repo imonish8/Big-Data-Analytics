@@ -1,8 +1,5 @@
 class Student:
-	
-	#subs = { "Maths" : "{maths.marks}", "Chemistry" : "{chem.marks}", "Physic" : "{phy.marks}"}
-
-	#def __init__(self, rollno, sname, coursename, maths.marks, chem.marks, phy.marks):
+	marks = {}
 	def __init__(self,rollno, sname, coursename):
 		self.rollno = rollno
 		self.sname = sname
@@ -14,9 +11,18 @@ class Student:
 	def __str__(self):
 		#return f"Student INFO , RollNo : {self.rollno}, Name : {self.sname}, Course Name : "{self.coursename}, Maths : {self.maths.marks}, Chemistry : {self.chem.marks}, Physics : {self.phy.marks}"
 		return f"Student Name : {self.sname}, Student Roll : {self.rollno}, Student Course : {self.coursename}"
+	
+	
+	def inputMarks(self):
+		print("Enter the number of Subjects ")
+		n = int(input("Enter number")
+		for mark in range(n):
+			key = input("Enter subject name")
+			value = int(input("
+
 
 
 s1 = Student(22, "Raj", "DBDA")
-print(s1)
+
 		
 	
