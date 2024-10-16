@@ -1,0 +1,37 @@
+# IPython log file
+
+print("Hello Jupyter Console !!")
+2+2
+#[Out]# 4
+for i in range(1,5):
+    print("Jupyter Console is easy peasy !!!")
+%lsmagic
+#[Out]# Available line magics:
+#[Out]# %alias  %alias_magic  %autoawait  %autocall  %automagic  %autosave  %bookmark  %cat  %cd  %clear  %code_wrap  %colors  %conda  %config  %connect_info  %cp  %debug  %dhist  %dirs  %doctest_mode  %ed  %edit  %env  %gui  %hist  %history  %killbgscripts  %ldir  %less  %lf  %lk  %ll  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %ls  %lsmagic  %lx  %macro  %magic  %mamba  %man  %matplotlib  %micromamba  %mkdir  %more  %mv  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %pip  %popd  %pprint  %precision  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  %reset_selective  %rm  %rmdir  %run  %save  %sc  %set_env  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
+#[Out]# 
+#[Out]# Available cell magics:
+#[Out]# %%!  %%HTML  %%SVG  %%bash  %%capture  %%code_wrap  %%debug  %%file  %%html  %%javascript  %%js  %%latex  %%markdown  %%perl  %%prun  %%pypy  %%python  %%python2  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
+#[Out]# 
+#[Out]# Automagic is ON, % prefix IS NOT needed for line magics.
+%pwd
+#[Out]# '/Users/imonish8/Desktop/Big-Data-Analytics/Python'
+%timeit sum(range(1,5))
+%%timeit
+total = 0
+for i in range(100):
+    total += i
+%%writefile /Users/imonish8/Desktop/Big-Data-Analytics/Python/Notebooks/NumpyConsole.py
+print("Hello Pandas and Numpy In Jupyter Console !!! ")
+print("Hello")
+from IPython.display import Image
+Image(url='https://www.python.org/static/community_logos/python-logo.png')
+#[Out]# <IPython.core.display.Image object>
+%history -f introJupyterConsole.py
+%pwd
+#[Out]# '/Users/imonish8/Desktop/Big-Data-Analytics/Python'
+%who
+# Wed, 16 Oct 2024 10:05:50
+%logstate# Wed, 16 Oct 2024 10:06:26
+# %save filename.py# Wed, 16 Oct 2024 10:09:23
+# save filename.py -1   (to save all lines to path)# Wed, 16 Oct 2024 10:09:30
+%logstop
