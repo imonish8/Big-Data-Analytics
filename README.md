@@ -1,4 +1,12 @@
 # Welcome to Building in Public.
+## Monish Here, Who initiated this Repo.
+### Open anyone who want to add to this Repo.
+ #### 1. Clone this in you system Using
+```
+ git clone https://github.com/imonish8/Big-Data-Analytics 
+```
+ #### 2. Create Pull Request when Commiting Changes to Original Repository. Hoping to see what you add here.
+
 
 I Update here Everyday 
 
