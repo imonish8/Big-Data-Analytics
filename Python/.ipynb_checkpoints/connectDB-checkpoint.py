@@ -24,4 +24,3 @@ try:
         print ("Inserted successfully")
 except (mysql.connector.Error, IOError) as err:
         print ("Errorf}", err)
-        
