@@ -1,0 +1,793 @@
+Last login: Wed Oct 23 22:52:13 on ttys000
+imonish8@MoMac ~ % brew install mongodb-community@8.0
+==> Auto-updating Homebrew...
+Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with
+HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Warning: No remote 'origin' in /opt/homebrew/Library/Taps/user/homebrew-tap, skipping update!
+==> Auto-updated Homebrew!
+Updated 3 taps (homebrew/services, homebrew/core and homebrew/cask).
+==> New Formulae
+ansible-builder            localai                    tex-fmt
+kubetail                   sequoia-sq                 wasi-libc
+lbfgspp                    sleek                      zsh-system-clipboard
+==> New Casks
+cocoapacketanalyzer        font-faculty-glyphic       mailbird
+follow                     huggingchat                sketchup
+follow@nightly             huly                       unraid-usb-creator-next
+font-doto                  lets
+
+You have 19 outdated formulae installed.
+
+Warning: No available formula with the name "mongodb-community@8.0".
+==> Searching for similarly named formulae and casks...
+==> Casks
+mongodb-compass
+
+To install mongodb-compass, run:
+  brew install --cask mongodb-compass
+imonish8@MoMac ~ % mongodb
+zsh: command not found: mongodb
+imonish8@MoMac ~ % mongodb --version
+zsh: command not found: mongodb
+imonish8@MoMac ~ % mongodb-community@8.0
+zsh: command not found: mongodb-community@8.0
+imonish8@MoMac ~ % mongodb-community@8.0 --version
+zsh: command not found: mongodb-community@8.0
+imonish8@MoMac ~ % mongo --version
+zsh: command not found: mongo
+imonish8@MoMac ~ % mongodb --version
+zsh: command not found: mongodb
+imonish8@MoMac ~ % mongosh
+zsh: command not found: mongosh
+imonish8@MoMac ~ % brew lis
+Error: Unknown command: brew lis
+imonish8@MoMac ~ % brew list
+==> Formulae
+abseil			libcbor			oniguruma
+asciiquarium		libevent		openjdk
+berkeley-db@5		libfido2		openssl@3
+brotli			libnghttp2		pandoc
+c-ares			libpng			pcre
+ca-certificates		libsodium		pcre2
+cairo			libtiff			perl
+certifi			libuv			pixman
+cmatrix			libx11			privoxy
+fontconfig		libxau			protobuf
+freetype		libxcb			python-packaging
+gdbm			libxdmcp		python@3.12
+gettext			libxext			readline
+gh			libxrender		screenresolution
+giflib			libyaml			sl
+git			little-cms2		speedtest-cli
+glances			lz4			sqlite
+glib			lzo			tomcat
+graphite2		mactop			tree
+harfbuzz		mpdecimal		watch
+htop			mysql			xorgproto
+icu4c			mysql@8.0		xz
+jpeg-turbo		ncurses			zeromq
+jq			neofetch		zlib
+jupyterlab		node			zstd
+
+==> Casks
+mysql-connector-python	signal			visual-studio-code
+imonish8@MoMac ~ % brew install mongosh
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+######################################################################### 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/mongosh/manifests/2.3.2
+######################################################################### 100.0%
+==> Fetching dependencies for mongosh: icu4c@75, libuv and node
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/75/manifests/75.1
+######################################################################### 100.0%
+==> Fetching icu4c@75
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/75/blobs/sha256:a7e245c13
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libuv/manifests/1.49.2
+######################################################################### 100.0%
+==> Fetching libuv
+==> Downloading https://ghcr.io/v2/homebrew/core/libuv/blobs/sha256:0b28a00add18
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/node/manifests/22.10.0
+######################################################################### 100.0%
+==> Fetching dependencies for node: c-ares
+==> Downloading https://ghcr.io/v2/homebrew/core/c-ares/manifests/1.34.2
+######################################################################### 100.0%
+==> Fetching c-ares
+==> Downloading https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:164c38ef6fa
+######################################################################### 100.0%
+==> Fetching node
+==> Downloading https://ghcr.io/v2/homebrew/core/node/blobs/sha256:8873a7d069ab2
+######################################################################### 100.0%
+==> Fetching mongosh
+==> Downloading https://ghcr.io/v2/homebrew/core/mongosh/blobs/sha256:db5d98bcd3
+######################################################################### 100.0%
+==> Installing dependencies for mongosh: icu4c@75, libuv and node
+==> Installing mongosh dependency: icu4c@75
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/75/manifests/75.1
+Already downloaded: /Users/imonish8/Library/Caches/Homebrew/downloads/a44f04ecc59f3f852ae5f4394715b15eda2b4c4afe4792cdd6d2772ae2897aa0--icu4c@75-75.1.bottle_manifest.json
+==> Pouring icu4c@75--75.1.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/icu4c@75/75.1: 277 files, 78.8MB
+==> Installing mongosh dependency: libuv
+==> Downloading https://ghcr.io/v2/homebrew/core/libuv/manifests/1.49.2
+Already downloaded: /Users/imonish8/Library/Caches/Homebrew/downloads/a32b5abd59fa5add407c237e71c8ccb52eca9bed1740be5e315b1bea6efde148--libuv-1.49.2.bottle_manifest.json
+==> Pouring libuv--1.49.2.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libuv/1.49.2: 20 files, 1.2MB
+==> Installing mongosh dependency: node
+==> Downloading https://ghcr.io/v2/homebrew/core/node/manifests/22.10.0
+Already downloaded: /Users/imonish8/Library/Caches/Homebrew/downloads/4bd0cd7be2cc6138df9abe24b56e414a3483a0f94b0693812e6a40c445e6abc2--node-22.10.0.bottle_manifest.json
+==> Installing dependencies for node: c-ares
+==> Installing node dependency: c-ares
+==> Downloading https://ghcr.io/v2/homebrew/core/c-ares/manifests/1.34.2
+Already downloaded: /Users/imonish8/Library/Caches/Homebrew/downloads/66d72418f3225dcbf26dbf8a82e1b18d47fb7581a210b0ef58b0fe9bd37a0eff--c-ares-1.34.2.bottle_manifest.json
+==> Pouring c-ares--1.34.2.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/c-ares/1.34.2: 176 files, 1MB
+==> Installing node
+==> Pouring node--22.10.0.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/node/22.10.0: 2,620 files, 80.8MB
+==> Installing mongosh
+==> Pouring mongosh--2.3.2.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/mongosh/2.3.2: 12,275 files, 69.9MB
+==> Running `brew cleanup mongosh`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+imonish8@MoMac ~ % mongosh   
+Current Mongosh Log ID:	6719cc519946d672f3a3992b
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.2
+MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017
+imonish8@MoMac ~ % mongosh --version
+2.3.2
+imonish8@MoMac ~ % mongosh        
+Current Mongosh Log ID:	671a0d6b3ab09b9db77b04f8
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.2
+Using MongoDB:		8.0.1
+Using Mongosh:		2.3.2
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2024-10-24T10:05:57.625+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> SHOW DBS;
+Uncaught:
+SyntaxError: Missing semicolon. (1:4)
+
+> 1 | SHOW DBS;
+    |     ^
+  2 |
+
+test> SHOW DBS
+Uncaught:
+SyntaxError: Missing semicolon. (1:4)
+
+> 1 | SHOW DBS
+    |     ^
+  2 |
+
+test> SHOW COLLECTIONS;
+Uncaught:
+SyntaxError: Missing semicolon. (1:4)
+
+> 1 | SHOW COLLECTIONS;
+    |     ^
+  2 |
+
+test> show dbs
+admin   40.00 KiB
+config  12.00 KiB
+local   40.00 KiB
+test> db.createCollections("intoshUsers")
+TypeError: db.createCollections is not a function
+test> db.createCollection("intoshUsers")
+{ ok: 1 }
+test> db.intoshUsers.find()
+
+test> show dbs
+admin   40.00 KiB
+config  60.00 KiB
+local   40.00 KiB
+test     8.00 KiB
+test> use test
+already on db test
+test> db.intoshUsers.insert({"UserName":"imonish8","Passcode":"123445"})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('671a0e7b3ab09b9db77b04f9') }
+}
+test> db.intoshUsers.find()
+[
+  {
+    _id: ObjectId('671a0e7b3ab09b9db77b04f9'),
+    UserName: 'imonish8',
+    Passcode: '123445'
+  }
+]
+test> db.intoshUsers.count()
+DeprecationWarning: Collection.count() is deprecated. Use countDocuments or estimatedDocumentCount.
+1
+test> db.intoshUsers.insert({"UserName":"Neel8","Passcode":"222445"})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('671a0ef03ab09b9db77b04fa') }
+}
+test> db.intoshUsers.insert({"UserName":"Karan8","Passcode":"233445"})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('671a0f053ab09b9db77b04fb') }
+}
+test> db.intoshUsers.insert({"UserName":"MN8","Passcode":"233345"})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('671a0f0f3ab09b9db77b04fc') }
+}
+test> db.intoshUsers.count()
+4
+test> db.intoshUsers.find()
+[
+  {
+    _id: ObjectId('671a0e7b3ab09b9db77b04f9'),
+    UserName: 'imonish8',
+    Passcode: '123445'
+  },
+  {
+    _id: ObjectId('671a0ef03ab09b9db77b04fa'),
+    UserName: 'Neel8',
+    Passcode: '222445'
+  },
+  {
+    _id: ObjectId('671a0f053ab09b9db77b04fb'),
+    UserName: 'Karan8',
+    Passcode: '233445'
+  },
+  {
+    _id: ObjectId('671a0f0f3ab09b9db77b04fc'),
+    UserName: 'MN8',
+    Passcode: '233345'
+  }
+]
+test> select * from intoshUsers where id = 1
+Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 | select * from intoshUsers where id = 1
+    |              ^
+  2 |
+
+test> db.intoshUsers.find({$and:[ UserName: 'MN8'],[Passcode: '233345'] })
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:36)
+
+> 1 | db.intoshUsers.find({$and:[ UserName: 'MN8'],[Passcode: '233345'] })
+    |                                     ^
+  2 |
+
+test> db.intoshUsers.find({$and:[{ UserName: 'MN8'},{Passcode: '233345'}] })
+[
+  {
+    _id: ObjectId('671a0f0f3ab09b9db77b04fc'),
+    UserName: 'MN8',
+    Passcode: '233345'
+  }
+]
+test> db.intoshUsers.find({$or:[{ UserName: 'MN8'},{Passcode: '233345'}] })
+[
+  {
+    _id: ObjectId('671a0f0f3ab09b9db77b04fc'),
+    UserName: 'MN8',
+    Passcode: '233345'
+  }
+]
+test> db.intoshUsers.find({$or:[{ UserName: 'MN8'},{Passcode: '233'}] })
+[
+  {
+    _id: ObjectId('671a0f0f3ab09b9db77b04fc'),
+    UserName: 'MN8',
+    Passcode: '233345'
+  }
+]
+test> db.intoshUsers.update({_id: ObjectId('671a0f0f3ab09b9db77b04fc')},{$set: { Passcode: '999999'}})
+DeprecationWarning: Collection.update() is deprecated. Use updateOne, updateMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+test> db.intoshUsers.find()
+[
+  {
+    _id: ObjectId('671a0e7b3ab09b9db77b04f9'),
+    UserName: 'imonish8',
+    Passcode: '123445'
+  },
+  {
+    _id: ObjectId('671a0ef03ab09b9db77b04fa'),
+    UserName: 'Neel8',
+    Passcode: '222445'
+  },
+  {
+    _id: ObjectId('671a0f053ab09b9db77b04fb'),
+    UserName: 'Karan8',
+    Passcode: '233445'
+  },
+  {
+    _id: ObjectId('671a0f0f3ab09b9db77b04fc'),
+    UserName: 'MN8',
+    Passcode: '999999'
+  }
+]
+test> show collections
+intoshUsers
+test> db.createCollection("Book")
+{ ok: 1 }
+test> db.Book.insert({"Title":"Mac Manual","Author":"Apple","Published_year":"2022","Genre":"Technology"})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('671a22fc3ab09b9db77b04fd') }
+}
+test> db.Book.find()
+[
+  {
+    _id: ObjectId('671a22fc3ab09b9db77b04fd'),
+    Title: 'Mac Manual',
+    Author: 'Apple',
+    Published_year: '2022',
+    Genre: 'Technology'
+  }
+]
+test> db.Book.insertMany([
+...     {"Title": "The Art of War", "Author": "Sun Tzu", "Published_year": "500 BC", "Genre": "Military Strategy"},
+...     {"Title": "To Kill a Mockingbird", "Author": "Harper Lee", "Published_year": "1960", "Genre": "Fiction"},
+...     {"Title": "A Brief History of Time", "Author": "Stephen Hawking", "Published_year": "1988", "Genre": "Science"},
+...     {"Title": "The Great Gatsby", "Author": "F. Scott Fitzgerald", "Published_year": "1925", "Genre": "Classic Literature"},
+...     {"Title": "The Da Vinci Code", "Author": "Dan Brown", "Published_year": "2003", "Genre": "Mystery/Thriller"},
+...     {"Title": "Pride and Prejudice", "Author": "Jane Austen", "Published_year": "1813", "Genre": "Romance"},
+...     {"Title": "The Catcher in the Rye", "Author": "J.D. Salinger", "Published_year": "1951", "Genre": "Young Adult"},
+...     {"Title": "The Power of Habit", "Author": "Charles Duhigg", "Published_year": "2012", "Genre": "Self-Help"},
+...     {"Title": "Sapiens: A Brief History of Humankind", "Author": "Yuval Noah Harari", "Published_year": "2011", "Genre": "Non-Fiction"},
+...     {"Title": "The Hobbit", "Author": "J.R.R. Tolkien", "Published_year": "1937", "Genre": "Fantasy"}
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('671a23903ab09b9db77b04fe'),
+    '1': ObjectId('671a23903ab09b9db77b04ff'),
+    '2': ObjectId('671a23903ab09b9db77b0500'),
+    '3': ObjectId('671a23903ab09b9db77b0501'),
+    '4': ObjectId('671a23903ab09b9db77b0502'),
+    '5': ObjectId('671a23903ab09b9db77b0503'),
+    '6': ObjectId('671a23903ab09b9db77b0504'),
+    '7': ObjectId('671a23903ab09b9db77b0505'),
+    '8': ObjectId('671a23903ab09b9db77b0506'),
+    '9': ObjectId('671a23903ab09b9db77b0507')
+  }
+}
+test> db.Book.find()
+[
+  {
+    _id: ObjectId('671a22fc3ab09b9db77b04fd'),
+    Title: 'Mac Manual',
+    Author: 'Apple',
+    Published_year: '2022',
+    Genre: 'Technology'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b04fe'),
+    Title: 'The Art of War',
+    Author: 'Sun Tzu',
+    Published_year: '500 BC',
+    Genre: 'Military Strategy'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b04ff'),
+    Title: 'To Kill a Mockingbird',
+    Author: 'Harper Lee',
+    Published_year: '1960',
+    Genre: 'Fiction'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0500'),
+    Title: 'A Brief History of Time',
+    Author: 'Stephen Hawking',
+    Published_year: '1988',
+    Genre: 'Science'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0501'),
+    Title: 'The Great Gatsby',
+    Author: 'F. Scott Fitzgerald',
+    Published_year: '1925',
+    Genre: 'Classic Literature'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0502'),
+    Title: 'The Da Vinci Code',
+    Author: 'Dan Brown',
+    Published_year: '2003',
+    Genre: 'Mystery/Thriller'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0503'),
+    Title: 'Pride and Prejudice',
+    Author: 'Jane Austen',
+    Published_year: '1813',
+    Genre: 'Romance'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0504'),
+    Title: 'The Catcher in the Rye',
+    Author: 'J.D. Salinger',
+    Published_year: '1951',
+    Genre: 'Young Adult'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0505'),
+    Title: 'The Power of Habit',
+    Author: 'Charles Duhigg',
+    Published_year: '2012',
+    Genre: 'Self-Help'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0506'),
+    Title: 'Sapiens: A Brief History of Humankind',
+    Author: 'Yuval Noah Harari',
+    Published_year: '2011',
+    Genre: 'Non-Fiction'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0507'),
+    Title: 'The Hobbit',
+    Author: 'J.R.R. Tolkien',
+    Published_year: '1937',
+    Genre: 'Fantasy'
+  }
+]
+test> db.Book.find({$or: [{Genre:'Romance'}]})
+[
+  {
+    _id: ObjectId('671a23903ab09b9db77b0503'),
+    Title: 'Pride and Prejudice',
+    Author: 'Jane Austen',
+    Published_year: '1813',
+    Genre: 'Romance'
+  }
+]
+test> db.Book.update({"Title":"Pride and Prejudice", "Author":"Jane Austen","Published_year":"1813",Genre:'Romance and Love'})
+MongoshInvalidInputError: [COMMON-10001] Missing required argument at position 1 (Collection.update)
+test> db.Book.update({"Title":"Pride and Prejudice", "Author":"Jane Austen","Published_year":"1813","Genre":'Romance and Love'})
+test> db.Book.update({"Title":"Pride and Prejudice", "Author":"Jane Austen","Published_year":"1813","Genre":"Romance and Love"})
+MongoshInvalidInputError: [COMMON-10001] Missing required argument at position 1 (Collection.update)
+test> db.Book.update({_id: ObjectId('671a23903ab09b9db77b0503')},{$set:{Genre:"Romance and Love"})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:91)
+
+> 1 | db.Book.update({_id: ObjectId('671a23903ab09b9db77b0503')},{$set:{Genre:"Romance and Love"})
+    |                                                                                            ^
+  2 |
+
+test> db.Book.update({_id: ObjectId('671a23903ab09b9db77b0503')},{$set:{Genre:"Romance and Love"}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+test> db.Book.find()
+[
+  {
+    _id: ObjectId('671a22fc3ab09b9db77b04fd'),
+    Title: 'Mac Manual',
+    Author: 'Apple',
+    Published_year: '2022',
+    Genre: 'Technology'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b04fe'),
+    Title: 'The Art of War',
+    Author: 'Sun Tzu',
+    Published_year: '500 BC',
+    Genre: 'Military Strategy'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b04ff'),
+    Title: 'To Kill a Mockingbird',
+    Author: 'Harper Lee',
+    Published_year: '1960',
+    Genre: 'Fiction'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0500'),
+    Title: 'A Brief History of Time',
+    Author: 'Stephen Hawking',
+    Published_year: '1988',
+    Genre: 'Science'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0501'),
+    Title: 'The Great Gatsby',
+    Author: 'F. Scott Fitzgerald',
+    Published_year: '1925',
+    Genre: 'Classic Literature'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0502'),
+    Title: 'The Da Vinci Code',
+    Author: 'Dan Brown',
+    Published_year: '2003',
+    Genre: 'Mystery/Thriller'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0503'),
+    Title: 'Pride and Prejudice',
+    Author: 'Jane Austen',
+    Published_year: '1813',
+    Genre: 'Romance and Love'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0504'),
+    Title: 'The Catcher in the Rye',
+    Author: 'J.D. Salinger',
+    Published_year: '1951',
+    Genre: 'Young Adult'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0505'),
+    Title: 'The Power of Habit',
+    Author: 'Charles Duhigg',
+    Published_year: '2012',
+    Genre: 'Self-Help'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0506'),
+    Title: 'Sapiens: A Brief History of Humankind',
+    Author: 'Yuval Noah Harari',
+    Published_year: '2011',
+    Genre: 'Non-Fiction'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0507'),
+    Title: 'The Hobbit',
+    Author: 'J.R.R. Tolkien',
+    Published_year: '1937',
+    Genre: 'Fantasy'
+  }
+]
+test> db.Book.update({Author: 'Stephen Hawking'},{$set:{Published_year:"2024"}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+test> db.Book.find()
+[
+  {
+    _id: ObjectId('671a22fc3ab09b9db77b04fd'),
+    Title: 'Mac Manual',
+    Author: 'Apple',
+    Published_year: '2022',
+    Genre: 'Technology'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b04fe'),
+    Title: 'The Art of War',
+    Author: 'Sun Tzu',
+    Published_year: '500 BC',
+    Genre: 'Military Strategy'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b04ff'),
+    Title: 'To Kill a Mockingbird',
+    Author: 'Harper Lee',
+    Published_year: '1960',
+    Genre: 'Fiction'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0500'),
+    Title: 'A Brief History of Time',
+    Author: 'Stephen Hawking',
+    Published_year: '2024',
+    Genre: 'Science'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0501'),
+    Title: 'The Great Gatsby',
+    Author: 'F. Scott Fitzgerald',
+    Published_year: '1925',
+    Genre: 'Classic Literature'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0502'),
+    Title: 'The Da Vinci Code',
+    Author: 'Dan Brown',
+    Published_year: '2003',
+    Genre: 'Mystery/Thriller'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0503'),
+    Title: 'Pride and Prejudice',
+    Author: 'Jane Austen',
+    Published_year: '1813',
+    Genre: 'Romance and Love'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0504'),
+    Title: 'The Catcher in the Rye',
+    Author: 'J.D. Salinger',
+    Published_year: '1951',
+    Genre: 'Young Adult'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0505'),
+    Title: 'The Power of Habit',
+    Author: 'Charles Duhigg',
+    Published_year: '2012',
+    Genre: 'Self-Help'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0506'),
+    Title: 'Sapiens: A Brief History of Humankind',
+    Author: 'Yuval Noah Harari',
+    Published_year: '2011',
+    Genre: 'Non-Fiction'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0507'),
+    Title: 'The Hobbit',
+    Author: 'J.R.R. Tolkien',
+    Published_year: '1937',
+    Genre: 'Fantasy'
+  }
+]
+test> db.Book.remove({Title:"The Hobbit"})
+DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+{ acknowledged: true, deletedCount: 1 }
+test> db.Book.find()
+[
+  {
+    _id: ObjectId('671a22fc3ab09b9db77b04fd'),
+    Title: 'Mac Manual',
+    Author: 'Apple',
+    Published_year: '2022',
+    Genre: 'Technology'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b04fe'),
+    Title: 'The Art of War',
+    Author: 'Sun Tzu',
+    Published_year: '500 BC',
+    Genre: 'Military Strategy'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b04ff'),
+    Title: 'To Kill a Mockingbird',
+    Author: 'Harper Lee',
+    Published_year: '1960',
+    Genre: 'Fiction'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0500'),
+    Title: 'A Brief History of Time',
+    Author: 'Stephen Hawking',
+    Published_year: '2024',
+    Genre: 'Science'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0501'),
+    Title: 'The Great Gatsby',
+    Author: 'F. Scott Fitzgerald',
+    Published_year: '1925',
+    Genre: 'Classic Literature'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0502'),
+    Title: 'The Da Vinci Code',
+    Author: 'Dan Brown',
+    Published_year: '2003',
+    Genre: 'Mystery/Thriller'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0503'),
+    Title: 'Pride and Prejudice',
+    Author: 'Jane Austen',
+    Published_year: '1813',
+    Genre: 'Romance and Love'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0504'),
+    Title: 'The Catcher in the Rye',
+    Author: 'J.D. Salinger',
+    Published_year: '1951',
+    Genre: 'Young Adult'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0505'),
+    Title: 'The Power of Habit',
+    Author: 'Charles Duhigg',
+    Published_year: '2012',
+    Genre: 'Self-Help'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0506'),
+    Title: 'Sapiens: A Brief History of Humankind',
+    Author: 'Yuval Noah Harari',
+    Published_year: '2011',
+    Genre: 'Non-Fiction'
+  }
+]
+test> db.Book.remove({Genre:"Fiction"})
+{ acknowledged: true, deletedCount: 1 }
+test> db.Book.find()
+[
+  {
+    _id: ObjectId('671a22fc3ab09b9db77b04fd'),
+    Title: 'Mac Manual',
+    Author: 'Apple',
+    Published_year: '2022',
+    Genre: 'Technology'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b04fe'),
+    Title: 'The Art of War',
+    Author: 'Sun Tzu',
+    Published_year: '500 BC',
+    Genre: 'Military Strategy'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0500'),
+    Title: 'A Brief History of Time',
+    Author: 'Stephen Hawking',
+    Published_year: '2024',
+    Genre: 'Science'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0501'),
+    Title: 'The Great Gatsby',
+    Author: 'F. Scott Fitzgerald',
+    Published_year: '1925',
+    Genre: 'Classic Literature'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0502'),
+    Title: 'The Da Vinci Code',
+    Author: 'Dan Brown',
+    Published_year: '2003',
+    Genre: 'Mystery/Thriller'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0503'),
+    Title: 'Pride and Prejudice',
+    Author: 'Jane Austen',
+    Published_year: '1813',
+    Genre: 'Romance and Love'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0504'),
+    Title: 'The Catcher in the Rye',
+    Author: 'J.D. Salinger',
+    Published_year: '1951',
+    Genre: 'Young Adult'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0505'),
+    Title: 'The Power of Habit',
+    Author: 'Charles Duhigg',
+    Published_year: '2012',
+    Genre: 'Self-Help'
+  },
+  {
+    _id: ObjectId('671a23903ab09b9db77b0506'),
+    Title: 'Sapiens: A Brief History of Humankind',
+    Author: 'Yuval Noah Harari',
+    Published_year: '2011',
+    Genre: 'Non-Fiction'
+  }
+]
+test> 
