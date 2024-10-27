@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3eb20cb3-8e97-4012-8664-dc46c9a049f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../NoSQL/Assignment_2_terminal.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoSQL/Assingment_1_Terminal.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AddMatrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssginmentDict.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cars.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CheckAge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CheckDataType.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmpCompanyProtected.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Employee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exception.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exception2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exception3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FileHandling.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Filter_longestWord.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunctionToday.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Function_assignment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GenericException.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GuessNumber.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../INHERITinPYTHON.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroJupyterConsole.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntroSeaBorn.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListEx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListPandas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LongestWord.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LongestWordTarget.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NegativeIndex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOPSinPYTHON.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OverLapping.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python Program/problem_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python Program/problem_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python Program/problem_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python Program/problem_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python Program/problem_5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python Program/problem_6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python Program/problem_7.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python Program/problem_8.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RaiseException.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Regx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReverseOrder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Robot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RowSum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RowSum.pyu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shapes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleCalc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StringAssignment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Student.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentDict.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentGrades.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Translate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TryFinally.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TupleEx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arith.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../class_python.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../connectDB.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../copyEx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../count_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseIntroPython.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day_12.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../factorial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../factors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstFive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../introJupyterConsole.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../linkedlist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../listComp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../listMult.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../maxLIST.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mergeDict.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod-1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../osPython.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../positiveDiff.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../preSpecified.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../printALT.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../printChar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../printEVEN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../problem_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../problem_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../problem_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../problem_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../problem_5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../problem_6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../problem_7.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../problem_8.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reverseList.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shutilFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../singly_linklist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sumOfN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenMultiple.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuple.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tupleQuiz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuple_begin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whileLOOP.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../withFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../youtube.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../youtube.py.save" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "imonish8"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/imonish8/Big-Data-Analytics.git",
+    "accountId": "f2fcab2b-7890-4601-8550-0c562f8beb92"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2nyA47SMkiUmpsDiBYPETNf7SOJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/imonish8/Desktop/Big-Data-Analytics/Python/PycharmProjects"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3eb20cb3-8e97-4012-8664-dc46c9a049f8" name="Changes" comment="" />
+      <created>1729934747686</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729934747686</updated>
+    </task>
+    <servers />
+  </component>
+</project>
