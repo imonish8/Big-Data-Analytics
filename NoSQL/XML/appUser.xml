@@ -1,0 +1,7 @@
+<applicationUsers>
+
+    <user firstname = "Monish" lastname = "Nule" ></user>
+    <user firstname = "Neel" lastname = "Patel" ></user>
+    <user firstname = "Kushal" lastname = "Gandhi" ></user>
+
+</applicationUsers>
