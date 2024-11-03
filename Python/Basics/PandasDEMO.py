@@ -1,5 +1,5 @@
 # /Users/imonish8/Desktop/Big-Data-Analytics/PycharmProjects/MortalityFactors/Life Expectancy Data.csv
-from unittest.mock import inplace
+#from unittest.mock import inplace
 
 import pandas as pd
 
@@ -13,6 +13,8 @@ descall = data.describe(include='all')
 print(descall)
 nulltotal = data.isnull().sum()
 print(nulltotal)
+
+df = pd.DataFrame(data, columns=['col_name', 'col_name2' ...])
 
 #column and data manipulation
 data.rename(columns = {'Polio' : 'PolioCount'}, inplace=True)
