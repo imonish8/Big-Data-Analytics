@@ -11,3 +11,4 @@ df = pd.DataFrame(data)
 
 matrixx = df.corr()
 print(matrixx)
+print(matrixx)
