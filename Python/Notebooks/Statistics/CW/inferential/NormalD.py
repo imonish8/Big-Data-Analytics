@@ -11,7 +11,7 @@ deviation of 5 min.
 2.Calculate the probability of commuting times falling
 within certain ranges.'''
 """
-from tkinter.ttk import Label
+
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -32,7 +32,7 @@ plt.axvline(mean_avg, color='red', linestyle='--', label='Mean Commute Time')
 plt.axvline(mean_avg+std, color='yellow', linestyle='--', label='Standard Deviation + Mean')
 plt.axvline(mean_avg-std, color='yellow', linestyle='--', label='Standard Deviation - Mean')
 
-plt.legend()fw
+plt.legend()
 plt.show()
 
 print(PDF)

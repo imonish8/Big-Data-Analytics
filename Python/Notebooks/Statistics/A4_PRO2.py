@@ -15,10 +15,5 @@ print(m)
 sns.heatmap(m, annot=True)
 plt.show()
 
-unpacked = m.unstack()
-highest = unpacked.idxmax()
-#print(highest)
-
-"""
-FROM Heatmap and Corr Matrix Price and Quality with which  customers seems statisfied"""
+"""FROM Heatmap and Corr Matrix Price and Quality with which  customers seems statisfied"""
 
