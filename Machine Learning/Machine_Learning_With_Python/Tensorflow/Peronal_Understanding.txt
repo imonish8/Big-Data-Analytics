@@ -1,0 +1,3 @@
+Tensorflow is an array structure which act as data carrier for machine learning models.
+it can be modified using various manipulation.
+
